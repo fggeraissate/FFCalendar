@@ -1,0 +1,1123 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		55AFEC3D18AC435D005D2B91 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AFEC3C18AC435D005D2B91 /* Foundation.framework */; };
+		55AFEC3F18AC435D005D2B91 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AFEC3E18AC435D005D2B91 /* CoreGraphics.framework */; };
+		55AFEC4118AC435D005D2B91 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AFEC4018AC435D005D2B91 /* UIKit.framework */; };
+		55AFEC4318AC435D005D2B91 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AFEC4218AC435D005D2B91 /* CoreData.framework */; };
+		55AFEC4918AC435D005D2B91 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 55AFEC4718AC435D005D2B91 /* InfoPlist.strings */; };
+		55AFEC4B18AC435D005D2B91 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55AFEC4A18AC435D005D2B91 /* main.m */; };
+		55AFEC5218AC435D005D2B91 /* FFCalendar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 55AFEC5018AC435D005D2B91 /* FFCalendar.xcdatamodeld */; };
+		55AFEC5418AC435D005D2B91 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55AFEC5318AC435D005D2B91 /* Images.xcassets */; };
+		55AFEC5B18AC435D005D2B91 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AFEC5A18AC435D005D2B91 /* XCTest.framework */; };
+		55AFEC5C18AC435D005D2B91 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AFEC3C18AC435D005D2B91 /* Foundation.framework */; };
+		55AFEC5D18AC435D005D2B91 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AFEC4018AC435D005D2B91 /* UIKit.framework */; };
+		55AFEC5E18AC435D005D2B91 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AFEC4218AC435D005D2B91 /* CoreData.framework */; };
+		55AFEC6618AC435D005D2B91 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 55AFEC6418AC435D005D2B91 /* InfoPlist.strings */; };
+		55AFEC6818AC435D005D2B91 /* FFCalendarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 55AFEC6718AC435D005D2B91 /* FFCalendarTests.m */; };
+		CDA596E619086CFA00CB4F93 /* DailyCalendar.png in Resources */ = {isa = PBXBuildFile; fileRef = CDA596E219086CFA00CB4F93 /* DailyCalendar.png */; };
+		CDA596E719086CFA00CB4F93 /* MonthlyCalendar.png in Resources */ = {isa = PBXBuildFile; fileRef = CDA596E319086CFA00CB4F93 /* MonthlyCalendar.png */; };
+		CDA596E819086CFA00CB4F93 /* WeeklyCalendar.png in Resources */ = {isa = PBXBuildFile; fileRef = CDA596E419086CFA00CB4F93 /* WeeklyCalendar.png */; };
+		CDA596E919086CFA00CB4F93 /* YearlyCalendar.png in Resources */ = {isa = PBXBuildFile; fileRef = CDA596E519086CFA00CB4F93 /* YearlyCalendar.png */; };
+		CDA8F16C18DA3B7E0080DE6D /* FFAddEventPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F16718DA3B7E0080DE6D /* FFAddEventPopoverController.m */; };
+		CDA8F16D18DA3B7E0080DE6D /* FFButtonAddEventWithPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F16918DA3B7E0080DE6D /* FFButtonAddEventWithPopover.m */; };
+		CDA8F16E18DA3B7E0080DE6D /* FFCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F16B18DA3B7E0080DE6D /* FFCalendarViewController.m */; };
+		CDA8F1FC18DA43EA0080DE6D /* FFDayCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F17318DA43EA0080DE6D /* FFDayCalendarView.m */; };
+		CDA8F1FD18DA43EA0080DE6D /* FFDayHeaderButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F17718DA43EA0080DE6D /* FFDayHeaderButton.m */; };
+		CDA8F1FE18DA43EA0080DE6D /* FFDayHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F17918DA43EA0080DE6D /* FFDayHeaderCell.m */; };
+		CDA8F1FF18DA43EA0080DE6D /* FFDayHeaderCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F17B18DA43EA0080DE6D /* FFDayHeaderCollectionView.m */; };
+		CDA8F20018DA43EA0080DE6D /* FFDayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F18018DA43EA0080DE6D /* FFDayCell.m */; };
+		CDA8F20118DA43EA0080DE6D /* FFDayCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F18218DA43EA0080DE6D /* FFDayCollectionView.m */; };
+		CDA8F20218DA43EA0080DE6D /* FFDayCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F18418DA43EA0080DE6D /* FFDayCollectionViewFlowLayout.m */; };
+		CDA8F20318DA43EA0080DE6D /* FFDayScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F18618DA43EA0080DE6D /* FFDayScrollView.m */; };
+		CDA8F20418DA43EA0080DE6D /* FFMonthCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F18918DA43EA0080DE6D /* FFMonthCalendarView.m */; };
+		CDA8F20518DA43EA0080DE6D /* FFButtonWithEditAndDetailPopoversForMonthCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F18D18DA43EA0080DE6D /* FFButtonWithEditAndDetailPopoversForMonthCell.m */; };
+		CDA8F20618DA43EA0080DE6D /* FFMonthCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F18F18DA43EA0080DE6D /* FFMonthCell.m */; };
+		CDA8F20718DA43EA0080DE6D /* FFMonthCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F19118DA43EA0080DE6D /* FFMonthCollectionView.m */; };
+		CDA8F20818DA43EA0080DE6D /* FFMonthCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F19318DA43EA0080DE6D /* FFMonthCollectionViewFlowLayout.m */; };
+		CDA8F20918DA43EA0080DE6D /* FFMonthHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F19618DA43EA0080DE6D /* FFMonthHeaderView.m */; };
+		CDA8F20A18DA43EA0080DE6D /* FFWeekCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F19918DA43EA0080DE6D /* FFWeekCalendarView.m */; };
+		CDA8F20B18DA43EA0080DE6D /* FFWeekHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F19C18DA43EA0080DE6D /* FFWeekHeaderCell.m */; };
+		CDA8F20C18DA43EA0080DE6D /* FFWeekHeaderCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F19E18DA43EA0080DE6D /* FFWeekHeaderCollectionView.m */; };
+		CDA8F20D18DA43EA0080DE6D /* FFHourAndMinLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F1A218DA43EA0080DE6D /* FFHourAndMinLabel.m */; };
+		CDA8F20E18DA43EA0080DE6D /* FFViewWithHourLines.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F1A418DA43EA0080DE6D /* FFViewWithHourLines.m */; };
+		CDA8F20F18DA43EA0080DE6D /* FFWeekCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F1A718DA43EA0080DE6D /* FFWeekCell.m */; };
+		CDA8F21018DA43EA0080DE6D /* FFWeekCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F1A918DA43EA0080DE6D /* FFWeekCollectionView.m */; };
+		CDA8F21118DA43EA0080DE6D /* FFWeekCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F1AB18DA43EA0080DE6D /* FFWeekCollectionViewFlowLayout.m */; };
+		CDA8F21218DA43EA0080DE6D /* FFWeekScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F1AD18DA43EA0080DE6D /* FFWeekScrollView.m */; };
+		CDA8F21318DA43EA0080DE6D /* FFYearCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F1B018DA43EA0080DE6D /* FFYearCalendarView.m */; };
+		CDA8F21418DA43EA0080DE6D /* FFHeaderMonthForYearCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F1B518DA43EA0080DE6D /* FFHeaderMonthForYearCell.m */; };
+		CDA8F21518DA43EA0080DE6D /* FFMonthCellForYearCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F1B718DA43EA0080DE6D /* FFMonthCellForYearCell.m */; };
+		CDA8F21618DA43EA0080DE6D /* FFMonthCollectionViewForYearCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F1B918DA43EA0080DE6D /* FFMonthCollectionViewForYearCell.m */; };
+		CDA8F21718DA43EA0080DE6D /* FFYearCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F1BB18DA43EA0080DE6D /* FFYearCell.m */; };
+		CDA8F21818DA43EA0080DE6D /* FFYearCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F1BD18DA43EA0080DE6D /* FFYearCollectionView.m */; };
+		CDA8F21918DA43EA0080DE6D /* FFYearCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F1BF18DA43EA0080DE6D /* FFYearCollectionViewFlowLayout.m */; };
+		CDA8F21A18DA43EA0080DE6D /* FFBlueButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F1C318DA43EA0080DE6D /* FFBlueButton.m */; };
+		CDA8F21B18DA43EA0080DE6D /* FFRedAndWhiteButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F1C518DA43EA0080DE6D /* FFRedAndWhiteButton.m */; };
+		CDA8F21C18DA43EA0080DE6D /* NSDate+FFDaysCount.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F1C818DA43EA0080DE6D /* NSDate+FFDaysCount.m */; };
+		CDA8F21D18DA43EA0080DE6D /* UIColor+FFMoreColors.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F1CA18DA43EA0080DE6D /* UIColor+FFMoreColors.m */; };
+		CDA8F21E18DA43EA0080DE6D /* UIImage+FFCustomMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F1CC18DA43EA0080DE6D /* UIImage+FFCustomMethods.m */; };
+		CDA8F21F18DA43EA0080DE6D /* UILabel+FFCustomMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F1CE18DA43EA0080DE6D /* UILabel+FFCustomMethods.m */; };
+		CDA8F22018DA43EA0080DE6D /* FFDateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F1D218DA43EA0080DE6D /* FFDateManager.m */; };
+		CDA8F22118DA43EA0080DE6D /* FFEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F1D518DA43EA0080DE6D /* FFEvent.m */; };
+		CDA8F22218DA43EA0080DE6D /* FFButtonWithDatePopover.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F1DA18DA43EA0080DE6D /* FFButtonWithDatePopover.m */; };
+		CDA8F22318DA43EA0080DE6D /* FFDatePopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F1DC18DA43EA0080DE6D /* FFDatePopoverController.m */; };
+		CDA8F22418DA43EA0080DE6D /* FFButtonWithHourPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F1DF18DA43EA0080DE6D /* FFButtonWithHourPopover.m */; };
+		CDA8F22518DA43EA0080DE6D /* FFHourPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F1E118DA43EA0080DE6D /* FFHourPopoverController.m */; };
+		CDA8F22618DA43EA0080DE6D /* FFEditEventPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F1E318DA43EA0080DE6D /* FFEditEventPopoverController.m */; };
+		CDA8F22718DA43EA0080DE6D /* FFEditEventView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F1E518DA43EA0080DE6D /* FFEditEventView.m */; };
+		CDA8F22818DA43EA0080DE6D /* FFGuestsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F1E818DA43EA0080DE6D /* FFGuestsTableView.m */; };
+		CDA8F22918DA43EA0080DE6D /* FFGuestsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F1EA18DA43EA0080DE6D /* FFGuestsTableViewCell.m */; };
+		CDA8F22A18DA43EA0080DE6D /* FFSearchBarWithAutoComplete.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F1ED18DA43EA0080DE6D /* FFSearchBarWithAutoComplete.m */; };
+		CDA8F22B18DA43EA0080DE6D /* FFEventDetailPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F1F018DA43EA0080DE6D /* FFEventDetailPopoverController.m */; };
+		CDA8F22C18DA43EA0080DE6D /* FFEventDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F1F218DA43EA0080DE6D /* FFEventDetailView.m */; };
+		CDA8F22D18DA43EA0080DE6D /* blackCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = CDA8F1F518DA43EA0080DE6D /* blackCircle.png */; };
+		CDA8F22E18DA43EA0080DE6D /* redCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = CDA8F1F618DA43EA0080DE6D /* redCircle.png */; };
+		CDA8F22F18DA43EA0080DE6D /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CDA8F1F918DA43EA0080DE6D /* SVProgressHUD.bundle */; };
+		CDA8F23018DA43EA0080DE6D /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F1FB18DA43EA0080DE6D /* SVProgressHUD.m */; };
+		CDA8F23618DA45DC0080DE6D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F23518DA45DC0080DE6D /* AppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		55AFEC5F18AC435D005D2B91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55AFEC3118AC435C005D2B91 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55AFEC3818AC435C005D2B91;
+			remoteInfo = FFCalender;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		55AFEC3918AC435C005D2B91 /* FFCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FFCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		55AFEC3C18AC435D005D2B91 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		55AFEC3E18AC435D005D2B91 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		55AFEC4018AC435D005D2B91 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		55AFEC4218AC435D005D2B91 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		55AFEC4618AC435D005D2B91 /* FFCalendar-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FFCalendar-Info.plist"; sourceTree = "<group>"; };
+		55AFEC4818AC435D005D2B91 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		55AFEC4A18AC435D005D2B91 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		55AFEC4C18AC435D005D2B91 /* FFCalendar-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FFCalendar-Prefix.pch"; sourceTree = "<group>"; };
+		55AFEC5118AC435D005D2B91 /* FFCalendar.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FFCalendar.xcdatamodel; sourceTree = "<group>"; };
+		55AFEC5318AC435D005D2B91 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		55AFEC5918AC435D005D2B91 /* FFCalendarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FFCalendarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		55AFEC5A18AC435D005D2B91 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		55AFEC6318AC435D005D2B91 /* FFCalendarTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FFCalendarTests-Info.plist"; sourceTree = "<group>"; };
+		55AFEC6518AC435D005D2B91 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		55AFEC6718AC435D005D2B91 /* FFCalendarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFCalendarTests.m; sourceTree = "<group>"; };
+		CDA596E219086CFA00CB4F93 /* DailyCalendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DailyCalendar.png; sourceTree = "<group>"; };
+		CDA596E319086CFA00CB4F93 /* MonthlyCalendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MonthlyCalendar.png; sourceTree = "<group>"; };
+		CDA596E419086CFA00CB4F93 /* WeeklyCalendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WeeklyCalendar.png; sourceTree = "<group>"; };
+		CDA596E519086CFA00CB4F93 /* YearlyCalendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YearlyCalendar.png; sourceTree = "<group>"; };
+		CDA8F16618DA3B7E0080DE6D /* FFAddEventPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFAddEventPopoverController.h; sourceTree = "<group>"; };
+		CDA8F16718DA3B7E0080DE6D /* FFAddEventPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFAddEventPopoverController.m; sourceTree = "<group>"; };
+		CDA8F16818DA3B7E0080DE6D /* FFButtonAddEventWithPopover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFButtonAddEventWithPopover.h; sourceTree = "<group>"; };
+		CDA8F16918DA3B7E0080DE6D /* FFButtonAddEventWithPopover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFButtonAddEventWithPopover.m; sourceTree = "<group>"; };
+		CDA8F16A18DA3B7E0080DE6D /* FFCalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFCalendarViewController.h; sourceTree = "<group>"; };
+		CDA8F16B18DA3B7E0080DE6D /* FFCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFCalendarViewController.m; sourceTree = "<group>"; };
+		CDA8F17018DA43EA0080DE6D /* FFCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFCalendar.h; sourceTree = "<group>"; };
+		CDA8F17218DA43EA0080DE6D /* FFDayCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFDayCalendarView.h; sourceTree = "<group>"; };
+		CDA8F17318DA43EA0080DE6D /* FFDayCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFDayCalendarView.m; sourceTree = "<group>"; };
+		CDA8F17618DA43EA0080DE6D /* FFDayHeaderButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFDayHeaderButton.h; sourceTree = "<group>"; };
+		CDA8F17718DA43EA0080DE6D /* FFDayHeaderButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFDayHeaderButton.m; sourceTree = "<group>"; };
+		CDA8F17818DA43EA0080DE6D /* FFDayHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFDayHeaderCell.h; sourceTree = "<group>"; };
+		CDA8F17918DA43EA0080DE6D /* FFDayHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFDayHeaderCell.m; sourceTree = "<group>"; };
+		CDA8F17A18DA43EA0080DE6D /* FFDayHeaderCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFDayHeaderCollectionView.h; sourceTree = "<group>"; };
+		CDA8F17B18DA43EA0080DE6D /* FFDayHeaderCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFDayHeaderCollectionView.m; sourceTree = "<group>"; };
+		CDA8F17F18DA43EA0080DE6D /* FFDayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFDayCell.h; sourceTree = "<group>"; };
+		CDA8F18018DA43EA0080DE6D /* FFDayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFDayCell.m; sourceTree = "<group>"; };
+		CDA8F18118DA43EA0080DE6D /* FFDayCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFDayCollectionView.h; sourceTree = "<group>"; };
+		CDA8F18218DA43EA0080DE6D /* FFDayCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFDayCollectionView.m; sourceTree = "<group>"; };
+		CDA8F18318DA43EA0080DE6D /* FFDayCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFDayCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		CDA8F18418DA43EA0080DE6D /* FFDayCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFDayCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		CDA8F18518DA43EA0080DE6D /* FFDayScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFDayScrollView.h; sourceTree = "<group>"; };
+		CDA8F18618DA43EA0080DE6D /* FFDayScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFDayScrollView.m; sourceTree = "<group>"; };
+		CDA8F18818DA43EA0080DE6D /* FFMonthCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFMonthCalendarView.h; sourceTree = "<group>"; };
+		CDA8F18918DA43EA0080DE6D /* FFMonthCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFMonthCalendarView.m; sourceTree = "<group>"; };
+		CDA8F18C18DA43EA0080DE6D /* FFButtonWithEditAndDetailPopoversForMonthCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFButtonWithEditAndDetailPopoversForMonthCell.h; sourceTree = "<group>"; };
+		CDA8F18D18DA43EA0080DE6D /* FFButtonWithEditAndDetailPopoversForMonthCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFButtonWithEditAndDetailPopoversForMonthCell.m; sourceTree = "<group>"; };
+		CDA8F18E18DA43EA0080DE6D /* FFMonthCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFMonthCell.h; sourceTree = "<group>"; };
+		CDA8F18F18DA43EA0080DE6D /* FFMonthCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFMonthCell.m; sourceTree = "<group>"; };
+		CDA8F19018DA43EA0080DE6D /* FFMonthCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFMonthCollectionView.h; sourceTree = "<group>"; };
+		CDA8F19118DA43EA0080DE6D /* FFMonthCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFMonthCollectionView.m; sourceTree = "<group>"; };
+		CDA8F19218DA43EA0080DE6D /* FFMonthCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFMonthCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		CDA8F19318DA43EA0080DE6D /* FFMonthCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFMonthCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		CDA8F19518DA43EA0080DE6D /* FFMonthHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFMonthHeaderView.h; sourceTree = "<group>"; };
+		CDA8F19618DA43EA0080DE6D /* FFMonthHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFMonthHeaderView.m; sourceTree = "<group>"; };
+		CDA8F19818DA43EA0080DE6D /* FFWeekCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFWeekCalendarView.h; sourceTree = "<group>"; };
+		CDA8F19918DA43EA0080DE6D /* FFWeekCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFWeekCalendarView.m; sourceTree = "<group>"; };
+		CDA8F19B18DA43EA0080DE6D /* FFWeekHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFWeekHeaderCell.h; sourceTree = "<group>"; };
+		CDA8F19C18DA43EA0080DE6D /* FFWeekHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFWeekHeaderCell.m; sourceTree = "<group>"; };
+		CDA8F19D18DA43EA0080DE6D /* FFWeekHeaderCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFWeekHeaderCollectionView.h; sourceTree = "<group>"; };
+		CDA8F19E18DA43EA0080DE6D /* FFWeekHeaderCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFWeekHeaderCollectionView.m; sourceTree = "<group>"; };
+		CDA8F1A118DA43EA0080DE6D /* FFHourAndMinLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFHourAndMinLabel.h; sourceTree = "<group>"; };
+		CDA8F1A218DA43EA0080DE6D /* FFHourAndMinLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFHourAndMinLabel.m; sourceTree = "<group>"; };
+		CDA8F1A318DA43EA0080DE6D /* FFViewWithHourLines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFViewWithHourLines.h; sourceTree = "<group>"; };
+		CDA8F1A418DA43EA0080DE6D /* FFViewWithHourLines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFViewWithHourLines.m; sourceTree = "<group>"; };
+		CDA8F1A618DA43EA0080DE6D /* FFWeekCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFWeekCell.h; sourceTree = "<group>"; };
+		CDA8F1A718DA43EA0080DE6D /* FFWeekCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFWeekCell.m; sourceTree = "<group>"; };
+		CDA8F1A818DA43EA0080DE6D /* FFWeekCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFWeekCollectionView.h; sourceTree = "<group>"; };
+		CDA8F1A918DA43EA0080DE6D /* FFWeekCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFWeekCollectionView.m; sourceTree = "<group>"; };
+		CDA8F1AA18DA43EA0080DE6D /* FFWeekCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFWeekCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		CDA8F1AB18DA43EA0080DE6D /* FFWeekCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFWeekCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		CDA8F1AC18DA43EA0080DE6D /* FFWeekScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFWeekScrollView.h; sourceTree = "<group>"; };
+		CDA8F1AD18DA43EA0080DE6D /* FFWeekScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFWeekScrollView.m; sourceTree = "<group>"; };
+		CDA8F1AF18DA43EA0080DE6D /* FFYearCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFYearCalendarView.h; sourceTree = "<group>"; };
+		CDA8F1B018DA43EA0080DE6D /* FFYearCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFYearCalendarView.m; sourceTree = "<group>"; };
+		CDA8F1B418DA43EA0080DE6D /* FFHeaderMonthForYearCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFHeaderMonthForYearCell.h; sourceTree = "<group>"; };
+		CDA8F1B518DA43EA0080DE6D /* FFHeaderMonthForYearCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFHeaderMonthForYearCell.m; sourceTree = "<group>"; };
+		CDA8F1B618DA43EA0080DE6D /* FFMonthCellForYearCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFMonthCellForYearCell.h; sourceTree = "<group>"; };
+		CDA8F1B718DA43EA0080DE6D /* FFMonthCellForYearCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFMonthCellForYearCell.m; sourceTree = "<group>"; };
+		CDA8F1B818DA43EA0080DE6D /* FFMonthCollectionViewForYearCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFMonthCollectionViewForYearCell.h; sourceTree = "<group>"; };
+		CDA8F1B918DA43EA0080DE6D /* FFMonthCollectionViewForYearCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFMonthCollectionViewForYearCell.m; sourceTree = "<group>"; };
+		CDA8F1BA18DA43EA0080DE6D /* FFYearCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFYearCell.h; sourceTree = "<group>"; };
+		CDA8F1BB18DA43EA0080DE6D /* FFYearCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFYearCell.m; sourceTree = "<group>"; };
+		CDA8F1BC18DA43EA0080DE6D /* FFYearCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFYearCollectionView.h; sourceTree = "<group>"; };
+		CDA8F1BD18DA43EA0080DE6D /* FFYearCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFYearCollectionView.m; sourceTree = "<group>"; };
+		CDA8F1BE18DA43EA0080DE6D /* FFYearCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFYearCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		CDA8F1BF18DA43EA0080DE6D /* FFYearCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFYearCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		CDA8F1C218DA43EA0080DE6D /* FFBlueButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFBlueButton.h; sourceTree = "<group>"; };
+		CDA8F1C318DA43EA0080DE6D /* FFBlueButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFBlueButton.m; sourceTree = "<group>"; };
+		CDA8F1C418DA43EA0080DE6D /* FFRedAndWhiteButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFRedAndWhiteButton.h; sourceTree = "<group>"; };
+		CDA8F1C518DA43EA0080DE6D /* FFRedAndWhiteButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFRedAndWhiteButton.m; sourceTree = "<group>"; };
+		CDA8F1C718DA43EA0080DE6D /* NSDate+FFDaysCount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+FFDaysCount.h"; sourceTree = "<group>"; };
+		CDA8F1C818DA43EA0080DE6D /* NSDate+FFDaysCount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+FFDaysCount.m"; sourceTree = "<group>"; };
+		CDA8F1C918DA43EA0080DE6D /* UIColor+FFMoreColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+FFMoreColors.h"; sourceTree = "<group>"; };
+		CDA8F1CA18DA43EA0080DE6D /* UIColor+FFMoreColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+FFMoreColors.m"; sourceTree = "<group>"; };
+		CDA8F1CB18DA43EA0080DE6D /* UIImage+FFCustomMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FFCustomMethods.h"; sourceTree = "<group>"; };
+		CDA8F1CC18DA43EA0080DE6D /* UIImage+FFCustomMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FFCustomMethods.m"; sourceTree = "<group>"; };
+		CDA8F1CD18DA43EA0080DE6D /* UILabel+FFCustomMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+FFCustomMethods.h"; sourceTree = "<group>"; };
+		CDA8F1CE18DA43EA0080DE6D /* UILabel+FFCustomMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+FFCustomMethods.m"; sourceTree = "<group>"; };
+		CDA8F1CF18DA43EA0080DE6D /* FFConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFConstants.h; sourceTree = "<group>"; };
+		CDA8F1D118DA43EA0080DE6D /* FFDateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFDateManager.h; sourceTree = "<group>"; };
+		CDA8F1D218DA43EA0080DE6D /* FFDateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFDateManager.m; sourceTree = "<group>"; };
+		CDA8F1D418DA43EA0080DE6D /* FFEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFEvent.h; sourceTree = "<group>"; };
+		CDA8F1D518DA43EA0080DE6D /* FFEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFEvent.m; sourceTree = "<group>"; };
+		CDA8F1D918DA43EA0080DE6D /* FFButtonWithDatePopover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFButtonWithDatePopover.h; sourceTree = "<group>"; };
+		CDA8F1DA18DA43EA0080DE6D /* FFButtonWithDatePopover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFButtonWithDatePopover.m; sourceTree = "<group>"; };
+		CDA8F1DB18DA43EA0080DE6D /* FFDatePopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFDatePopoverController.h; sourceTree = "<group>"; };
+		CDA8F1DC18DA43EA0080DE6D /* FFDatePopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFDatePopoverController.m; sourceTree = "<group>"; };
+		CDA8F1DE18DA43EA0080DE6D /* FFButtonWithHourPopover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFButtonWithHourPopover.h; sourceTree = "<group>"; };
+		CDA8F1DF18DA43EA0080DE6D /* FFButtonWithHourPopover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFButtonWithHourPopover.m; sourceTree = "<group>"; };
+		CDA8F1E018DA43EA0080DE6D /* FFHourPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFHourPopoverController.h; sourceTree = "<group>"; };
+		CDA8F1E118DA43EA0080DE6D /* FFHourPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFHourPopoverController.m; sourceTree = "<group>"; };
+		CDA8F1E218DA43EA0080DE6D /* FFEditEventPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFEditEventPopoverController.h; sourceTree = "<group>"; };
+		CDA8F1E318DA43EA0080DE6D /* FFEditEventPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFEditEventPopoverController.m; sourceTree = "<group>"; };
+		CDA8F1E418DA43EA0080DE6D /* FFEditEventView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFEditEventView.h; sourceTree = "<group>"; };
+		CDA8F1E518DA43EA0080DE6D /* FFEditEventView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFEditEventView.m; sourceTree = "<group>"; };
+		CDA8F1E718DA43EA0080DE6D /* FFGuestsTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFGuestsTableView.h; sourceTree = "<group>"; };
+		CDA8F1E818DA43EA0080DE6D /* FFGuestsTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFGuestsTableView.m; sourceTree = "<group>"; };
+		CDA8F1E918DA43EA0080DE6D /* FFGuestsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFGuestsTableViewCell.h; sourceTree = "<group>"; };
+		CDA8F1EA18DA43EA0080DE6D /* FFGuestsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFGuestsTableViewCell.m; sourceTree = "<group>"; };
+		CDA8F1EC18DA43EA0080DE6D /* FFSearchBarWithAutoComplete.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFSearchBarWithAutoComplete.h; sourceTree = "<group>"; };
+		CDA8F1ED18DA43EA0080DE6D /* FFSearchBarWithAutoComplete.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFSearchBarWithAutoComplete.m; sourceTree = "<group>"; };
+		CDA8F1EF18DA43EA0080DE6D /* FFEventDetailPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFEventDetailPopoverController.h; sourceTree = "<group>"; };
+		CDA8F1F018DA43EA0080DE6D /* FFEventDetailPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFEventDetailPopoverController.m; sourceTree = "<group>"; };
+		CDA8F1F118DA43EA0080DE6D /* FFEventDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFEventDetailView.h; sourceTree = "<group>"; };
+		CDA8F1F218DA43EA0080DE6D /* FFEventDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFEventDetailView.m; sourceTree = "<group>"; };
+		CDA8F1F318DA43EA0080DE6D /* FFImportantFilesForCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFImportantFilesForCalendar.h; sourceTree = "<group>"; };
+		CDA8F1F518DA43EA0080DE6D /* blackCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackCircle.png; sourceTree = "<group>"; };
+		CDA8F1F618DA43EA0080DE6D /* redCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redCircle.png; sourceTree = "<group>"; };
+		CDA8F1F818DA43EA0080DE6D /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		CDA8F1F918DA43EA0080DE6D /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		CDA8F1FA18DA43EA0080DE6D /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		CDA8F1FB18DA43EA0080DE6D /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		CDA8F23418DA45DC0080DE6D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CDA8F23518DA45DC0080DE6D /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		55AFEC3618AC435C005D2B91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55AFEC3F18AC435D005D2B91 /* CoreGraphics.framework in Frameworks */,
+				55AFEC4318AC435D005D2B91 /* CoreData.framework in Frameworks */,
+				55AFEC4118AC435D005D2B91 /* UIKit.framework in Frameworks */,
+				55AFEC3D18AC435D005D2B91 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55AFEC5618AC435D005D2B91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55AFEC5B18AC435D005D2B91 /* XCTest.framework in Frameworks */,
+				55AFEC5E18AC435D005D2B91 /* CoreData.framework in Frameworks */,
+				55AFEC5D18AC435D005D2B91 /* UIKit.framework in Frameworks */,
+				55AFEC5C18AC435D005D2B91 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		55AFEC3018AC435C005D2B91 = {
+			isa = PBXGroup;
+			children = (
+				55AFEC4418AC435D005D2B91 /* FFCalendar */,
+				55AFEC6118AC435D005D2B91 /* FFCalendarTests */,
+				55AFEC3B18AC435C005D2B91 /* Frameworks */,
+				55AFEC3A18AC435C005D2B91 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		55AFEC3A18AC435C005D2B91 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				55AFEC3918AC435C005D2B91 /* FFCalendar.app */,
+				55AFEC5918AC435D005D2B91 /* FFCalendarTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		55AFEC3B18AC435C005D2B91 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				55AFEC3C18AC435D005D2B91 /* Foundation.framework */,
+				55AFEC3E18AC435D005D2B91 /* CoreGraphics.framework */,
+				55AFEC4018AC435D005D2B91 /* UIKit.framework */,
+				55AFEC4218AC435D005D2B91 /* CoreData.framework */,
+				55AFEC5A18AC435D005D2B91 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		55AFEC4418AC435D005D2B91 /* FFCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				CDA8F23418DA45DC0080DE6D /* AppDelegate.h */,
+				CDA8F23518DA45DC0080DE6D /* AppDelegate.m */,
+				CDA8F16418DA3B7E0080DE6D /* FFCalendarViewController */,
+				CDA8F16F18DA43EA0080DE6D /* FFCalendars */,
+				55AFEC4518AC435D005D2B91 /* Supporting Files */,
+				55AFEC5318AC435D005D2B91 /* Images.xcassets */,
+				55AFEC5018AC435D005D2B91 /* FFCalendar.xcdatamodeld */,
+			);
+			path = FFCalendar;
+			sourceTree = "<group>";
+		};
+		55AFEC4518AC435D005D2B91 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				55AFEC4618AC435D005D2B91 /* FFCalendar-Info.plist */,
+				55AFEC4718AC435D005D2B91 /* InfoPlist.strings */,
+				55AFEC4A18AC435D005D2B91 /* main.m */,
+				55AFEC4C18AC435D005D2B91 /* FFCalendar-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		55AFEC6118AC435D005D2B91 /* FFCalendarTests */ = {
+			isa = PBXGroup;
+			children = (
+				55AFEC6718AC435D005D2B91 /* FFCalendarTests.m */,
+				55AFEC6218AC435D005D2B91 /* Supporting Files */,
+			);
+			path = FFCalendarTests;
+			sourceTree = "<group>";
+		};
+		55AFEC6218AC435D005D2B91 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				55AFEC6318AC435D005D2B91 /* FFCalendarTests-Info.plist */,
+				55AFEC6418AC435D005D2B91 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CDA8F16418DA3B7E0080DE6D /* FFCalendarViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CDA8F16A18DA3B7E0080DE6D /* FFCalendarViewController.h */,
+				CDA8F16B18DA3B7E0080DE6D /* FFCalendarViewController.m */,
+				CDA8F16518DA3B7E0080DE6D /* FFButtonAddEventWithPopover */,
+			);
+			path = FFCalendarViewController;
+			sourceTree = "<group>";
+		};
+		CDA8F16518DA3B7E0080DE6D /* FFButtonAddEventWithPopover */ = {
+			isa = PBXGroup;
+			children = (
+				CDA8F16818DA3B7E0080DE6D /* FFButtonAddEventWithPopover.h */,
+				CDA8F16918DA3B7E0080DE6D /* FFButtonAddEventWithPopover.m */,
+				CDA8F16618DA3B7E0080DE6D /* FFAddEventPopoverController.h */,
+				CDA8F16718DA3B7E0080DE6D /* FFAddEventPopoverController.m */,
+			);
+			path = FFButtonAddEventWithPopover;
+			sourceTree = "<group>";
+		};
+		CDA8F16F18DA43EA0080DE6D /* FFCalendars */ = {
+			isa = PBXGroup;
+			children = (
+				CDA8F17018DA43EA0080DE6D /* FFCalendar.h */,
+				CDA8F1AE18DA43EA0080DE6D /* FFYearCalendarView */,
+				CDA8F18718DA43EA0080DE6D /* FFMonthCalendarView */,
+				CDA8F19718DA43EA0080DE6D /* FFWeekCalendarView */,
+				CDA8F17118DA43EA0080DE6D /* FFDayCalendarView */,
+				CDA8F1C018DA43EA0080DE6D /* Util */,
+			);
+			path = FFCalendars;
+			sourceTree = "<group>";
+		};
+		CDA8F17118DA43EA0080DE6D /* FFDayCalendarView */ = {
+			isa = PBXGroup;
+			children = (
+				CDA8F17218DA43EA0080DE6D /* FFDayCalendarView.h */,
+				CDA8F17318DA43EA0080DE6D /* FFDayCalendarView.m */,
+				CDA8F17418DA43EA0080DE6D /* FFDayHeaderCollectionView */,
+				CDA8F17C18DA43EA0080DE6D /* FFDayScrollView */,
+			);
+			path = FFDayCalendarView;
+			sourceTree = "<group>";
+		};
+		CDA8F17418DA43EA0080DE6D /* FFDayHeaderCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				CDA8F17A18DA43EA0080DE6D /* FFDayHeaderCollectionView.h */,
+				CDA8F17B18DA43EA0080DE6D /* FFDayHeaderCollectionView.m */,
+				CDA8F17518DA43EA0080DE6D /* FFDayHeaderCell */,
+			);
+			path = FFDayHeaderCollectionView;
+			sourceTree = "<group>";
+		};
+		CDA8F17518DA43EA0080DE6D /* FFDayHeaderCell */ = {
+			isa = PBXGroup;
+			children = (
+				CDA8F17818DA43EA0080DE6D /* FFDayHeaderCell.h */,
+				CDA8F17918DA43EA0080DE6D /* FFDayHeaderCell.m */,
+				CDA8F17618DA43EA0080DE6D /* FFDayHeaderButton.h */,
+				CDA8F17718DA43EA0080DE6D /* FFDayHeaderButton.m */,
+			);
+			path = FFDayHeaderCell;
+			sourceTree = "<group>";
+		};
+		CDA8F17C18DA43EA0080DE6D /* FFDayScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				CDA8F17D18DA43EA0080DE6D /* FFDayCollectionView */,
+				CDA8F18518DA43EA0080DE6D /* FFDayScrollView.h */,
+				CDA8F18618DA43EA0080DE6D /* FFDayScrollView.m */,
+			);
+			path = FFDayScrollView;
+			sourceTree = "<group>";
+		};
+		CDA8F17D18DA43EA0080DE6D /* FFDayCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				CDA8F17E18DA43EA0080DE6D /* FFDayCell */,
+				CDA8F18118DA43EA0080DE6D /* FFDayCollectionView.h */,
+				CDA8F18218DA43EA0080DE6D /* FFDayCollectionView.m */,
+				CDA8F18318DA43EA0080DE6D /* FFDayCollectionViewFlowLayout.h */,
+				CDA8F18418DA43EA0080DE6D /* FFDayCollectionViewFlowLayout.m */,
+			);
+			path = FFDayCollectionView;
+			sourceTree = "<group>";
+		};
+		CDA8F17E18DA43EA0080DE6D /* FFDayCell */ = {
+			isa = PBXGroup;
+			children = (
+				CDA8F17F18DA43EA0080DE6D /* FFDayCell.h */,
+				CDA8F18018DA43EA0080DE6D /* FFDayCell.m */,
+			);
+			path = FFDayCell;
+			sourceTree = "<group>";
+		};
+		CDA8F18718DA43EA0080DE6D /* FFMonthCalendarView */ = {
+			isa = PBXGroup;
+			children = (
+				CDA8F18818DA43EA0080DE6D /* FFMonthCalendarView.h */,
+				CDA8F18918DA43EA0080DE6D /* FFMonthCalendarView.m */,
+				CDA8F19418DA43EA0080DE6D /* FFMonthHeaderView */,
+				CDA8F18A18DA43EA0080DE6D /* FFMonthCollectionView */,
+			);
+			path = FFMonthCalendarView;
+			sourceTree = "<group>";
+		};
+		CDA8F18A18DA43EA0080DE6D /* FFMonthCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				CDA8F19018DA43EA0080DE6D /* FFMonthCollectionView.h */,
+				CDA8F19118DA43EA0080DE6D /* FFMonthCollectionView.m */,
+				CDA8F18E18DA43EA0080DE6D /* FFMonthCell.h */,
+				CDA8F18F18DA43EA0080DE6D /* FFMonthCell.m */,
+				CDA8F19218DA43EA0080DE6D /* FFMonthCollectionViewFlowLayout.h */,
+				CDA8F19318DA43EA0080DE6D /* FFMonthCollectionViewFlowLayout.m */,
+				CDA8F18B18DA43EA0080DE6D /* FFButtonWithEditAndDetailPopoversForMonthCell */,
+			);
+			path = FFMonthCollectionView;
+			sourceTree = "<group>";
+		};
+		CDA8F18B18DA43EA0080DE6D /* FFButtonWithEditAndDetailPopoversForMonthCell */ = {
+			isa = PBXGroup;
+			children = (
+				CDA8F18C18DA43EA0080DE6D /* FFButtonWithEditAndDetailPopoversForMonthCell.h */,
+				CDA8F18D18DA43EA0080DE6D /* FFButtonWithEditAndDetailPopoversForMonthCell.m */,
+			);
+			path = FFButtonWithEditAndDetailPopoversForMonthCell;
+			sourceTree = "<group>";
+		};
+		CDA8F19418DA43EA0080DE6D /* FFMonthHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				CDA8F19518DA43EA0080DE6D /* FFMonthHeaderView.h */,
+				CDA8F19618DA43EA0080DE6D /* FFMonthHeaderView.m */,
+			);
+			path = FFMonthHeaderView;
+			sourceTree = "<group>";
+		};
+		CDA8F19718DA43EA0080DE6D /* FFWeekCalendarView */ = {
+			isa = PBXGroup;
+			children = (
+				CDA8F19818DA43EA0080DE6D /* FFWeekCalendarView.h */,
+				CDA8F19918DA43EA0080DE6D /* FFWeekCalendarView.m */,
+				CDA8F19A18DA43EA0080DE6D /* FFWeekHeaderCollectionView */,
+				CDA8F19F18DA43EA0080DE6D /* FFWeekScrollView */,
+			);
+			path = FFWeekCalendarView;
+			sourceTree = "<group>";
+		};
+		CDA8F19A18DA43EA0080DE6D /* FFWeekHeaderCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				CDA8F19D18DA43EA0080DE6D /* FFWeekHeaderCollectionView.h */,
+				CDA8F19E18DA43EA0080DE6D /* FFWeekHeaderCollectionView.m */,
+				CDA8F19B18DA43EA0080DE6D /* FFWeekHeaderCell.h */,
+				CDA8F19C18DA43EA0080DE6D /* FFWeekHeaderCell.m */,
+			);
+			path = FFWeekHeaderCollectionView;
+			sourceTree = "<group>";
+		};
+		CDA8F19F18DA43EA0080DE6D /* FFWeekScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				CDA8F1AC18DA43EA0080DE6D /* FFWeekScrollView.h */,
+				CDA8F1AD18DA43EA0080DE6D /* FFWeekScrollView.m */,
+				CDA8F1A018DA43EA0080DE6D /* FFViewWithHourLines */,
+				CDA8F1A518DA43EA0080DE6D /* FFWeekCollectionView */,
+			);
+			path = FFWeekScrollView;
+			sourceTree = "<group>";
+		};
+		CDA8F1A018DA43EA0080DE6D /* FFViewWithHourLines */ = {
+			isa = PBXGroup;
+			children = (
+				CDA8F1A318DA43EA0080DE6D /* FFViewWithHourLines.h */,
+				CDA8F1A418DA43EA0080DE6D /* FFViewWithHourLines.m */,
+				CDA8F1A118DA43EA0080DE6D /* FFHourAndMinLabel.h */,
+				CDA8F1A218DA43EA0080DE6D /* FFHourAndMinLabel.m */,
+			);
+			path = FFViewWithHourLines;
+			sourceTree = "<group>";
+		};
+		CDA8F1A518DA43EA0080DE6D /* FFWeekCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				CDA8F1A818DA43EA0080DE6D /* FFWeekCollectionView.h */,
+				CDA8F1A918DA43EA0080DE6D /* FFWeekCollectionView.m */,
+				CDA8F1A618DA43EA0080DE6D /* FFWeekCell.h */,
+				CDA8F1A718DA43EA0080DE6D /* FFWeekCell.m */,
+				CDA8F1AA18DA43EA0080DE6D /* FFWeekCollectionViewFlowLayout.h */,
+				CDA8F1AB18DA43EA0080DE6D /* FFWeekCollectionViewFlowLayout.m */,
+			);
+			path = FFWeekCollectionView;
+			sourceTree = "<group>";
+		};
+		CDA8F1AE18DA43EA0080DE6D /* FFYearCalendarView */ = {
+			isa = PBXGroup;
+			children = (
+				CDA8F1AF18DA43EA0080DE6D /* FFYearCalendarView.h */,
+				CDA8F1B018DA43EA0080DE6D /* FFYearCalendarView.m */,
+				CDA8F1B118DA43EA0080DE6D /* FFYearCollectionView */,
+			);
+			path = FFYearCalendarView;
+			sourceTree = "<group>";
+		};
+		CDA8F1B118DA43EA0080DE6D /* FFYearCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				CDA8F1BC18DA43EA0080DE6D /* FFYearCollectionView.h */,
+				CDA8F1BD18DA43EA0080DE6D /* FFYearCollectionView.m */,
+				CDA8F1BE18DA43EA0080DE6D /* FFYearCollectionViewFlowLayout.h */,
+				CDA8F1BF18DA43EA0080DE6D /* FFYearCollectionViewFlowLayout.m */,
+				CDA8F1B218DA43EA0080DE6D /* FFYearCell */,
+			);
+			path = FFYearCollectionView;
+			sourceTree = "<group>";
+		};
+		CDA8F1B218DA43EA0080DE6D /* FFYearCell */ = {
+			isa = PBXGroup;
+			children = (
+				CDA8F1BA18DA43EA0080DE6D /* FFYearCell.h */,
+				CDA8F1BB18DA43EA0080DE6D /* FFYearCell.m */,
+				CDA8F1B318DA43EA0080DE6D /* FFMonthCollectionViewForYearCell */,
+			);
+			path = FFYearCell;
+			sourceTree = "<group>";
+		};
+		CDA8F1B318DA43EA0080DE6D /* FFMonthCollectionViewForYearCell */ = {
+			isa = PBXGroup;
+			children = (
+				CDA8F1B818DA43EA0080DE6D /* FFMonthCollectionViewForYearCell.h */,
+				CDA8F1B918DA43EA0080DE6D /* FFMonthCollectionViewForYearCell.m */,
+				CDA8F1B618DA43EA0080DE6D /* FFMonthCellForYearCell.h */,
+				CDA8F1B718DA43EA0080DE6D /* FFMonthCellForYearCell.m */,
+				CDA8F1B418DA43EA0080DE6D /* FFHeaderMonthForYearCell.h */,
+				CDA8F1B518DA43EA0080DE6D /* FFHeaderMonthForYearCell.m */,
+			);
+			path = FFMonthCollectionViewForYearCell;
+			sourceTree = "<group>";
+		};
+		CDA8F1C018DA43EA0080DE6D /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				CDA8F1F318DA43EA0080DE6D /* FFImportantFilesForCalendar.h */,
+				CDA8F1CF18DA43EA0080DE6D /* FFConstants.h */,
+				CDA8F1D318DA43EA0080DE6D /* FFEvent */,
+				CDA8F1D018DA43EA0080DE6D /* FFDateManeger */,
+				CDA8F1C618DA43EA0080DE6D /* FFCategories */,
+				CDA8F1D618DA43EA0080DE6D /* FFEventDetail and FFEditEvent Views and Popovers */,
+				CDA8F1C118DA43EA0080DE6D /* FFBlue and FFRed Buttons */,
+				CDA8F1F418DA43EA0080DE6D /* Images */,
+				CDA8F1F718DA43EA0080DE6D /* SVProgressHUD */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		CDA8F1C118DA43EA0080DE6D /* FFBlue and FFRed Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				CDA8F1C218DA43EA0080DE6D /* FFBlueButton.h */,
+				CDA8F1C318DA43EA0080DE6D /* FFBlueButton.m */,
+				CDA8F1C418DA43EA0080DE6D /* FFRedAndWhiteButton.h */,
+				CDA8F1C518DA43EA0080DE6D /* FFRedAndWhiteButton.m */,
+			);
+			path = "FFBlue and FFRed Buttons";
+			sourceTree = "<group>";
+		};
+		CDA8F1C618DA43EA0080DE6D /* FFCategories */ = {
+			isa = PBXGroup;
+			children = (
+				CDA8F1C718DA43EA0080DE6D /* NSDate+FFDaysCount.h */,
+				CDA8F1C818DA43EA0080DE6D /* NSDate+FFDaysCount.m */,
+				CDA8F1C918DA43EA0080DE6D /* UIColor+FFMoreColors.h */,
+				CDA8F1CA18DA43EA0080DE6D /* UIColor+FFMoreColors.m */,
+				CDA8F1CB18DA43EA0080DE6D /* UIImage+FFCustomMethods.h */,
+				CDA8F1CC18DA43EA0080DE6D /* UIImage+FFCustomMethods.m */,
+				CDA8F1CD18DA43EA0080DE6D /* UILabel+FFCustomMethods.h */,
+				CDA8F1CE18DA43EA0080DE6D /* UILabel+FFCustomMethods.m */,
+			);
+			path = FFCategories;
+			sourceTree = "<group>";
+		};
+		CDA8F1D018DA43EA0080DE6D /* FFDateManeger */ = {
+			isa = PBXGroup;
+			children = (
+				CDA8F1D118DA43EA0080DE6D /* FFDateManager.h */,
+				CDA8F1D218DA43EA0080DE6D /* FFDateManager.m */,
+			);
+			path = FFDateManeger;
+			sourceTree = "<group>";
+		};
+		CDA8F1D318DA43EA0080DE6D /* FFEvent */ = {
+			isa = PBXGroup;
+			children = (
+				CDA8F1D418DA43EA0080DE6D /* FFEvent.h */,
+				CDA8F1D518DA43EA0080DE6D /* FFEvent.m */,
+			);
+			path = FFEvent;
+			sourceTree = "<group>";
+		};
+		CDA8F1D618DA43EA0080DE6D /* FFEventDetail and FFEditEvent Views and Popovers */ = {
+			isa = PBXGroup;
+			children = (
+				CDA8F1D718DA43EA0080DE6D /* FFEditEvent View and Popover */,
+				CDA8F1EE18DA43EA0080DE6D /* FFEventDetail View and Popover */,
+			);
+			path = "FFEventDetail and FFEditEvent Views and Popovers";
+			sourceTree = "<group>";
+		};
+		CDA8F1D718DA43EA0080DE6D /* FFEditEvent View and Popover */ = {
+			isa = PBXGroup;
+			children = (
+				CDA8F1D818DA43EA0080DE6D /* FFButtonWithDatePopover */,
+				CDA8F1DD18DA43EA0080DE6D /* FFButtonWithTimePopover */,
+				CDA8F1E218DA43EA0080DE6D /* FFEditEventPopoverController.h */,
+				CDA8F1E318DA43EA0080DE6D /* FFEditEventPopoverController.m */,
+				CDA8F1E418DA43EA0080DE6D /* FFEditEventView.h */,
+				CDA8F1E518DA43EA0080DE6D /* FFEditEventView.m */,
+				CDA8F1E618DA43EA0080DE6D /* FFGuestsTableViewCell */,
+				CDA8F1EB18DA43EA0080DE6D /* FFSearchBarWithAutoComplete */,
+			);
+			path = "FFEditEvent View and Popover";
+			sourceTree = "<group>";
+		};
+		CDA8F1D818DA43EA0080DE6D /* FFButtonWithDatePopover */ = {
+			isa = PBXGroup;
+			children = (
+				CDA8F1D918DA43EA0080DE6D /* FFButtonWithDatePopover.h */,
+				CDA8F1DA18DA43EA0080DE6D /* FFButtonWithDatePopover.m */,
+				CDA8F1DB18DA43EA0080DE6D /* FFDatePopoverController.h */,
+				CDA8F1DC18DA43EA0080DE6D /* FFDatePopoverController.m */,
+			);
+			path = FFButtonWithDatePopover;
+			sourceTree = "<group>";
+		};
+		CDA8F1DD18DA43EA0080DE6D /* FFButtonWithTimePopover */ = {
+			isa = PBXGroup;
+			children = (
+				CDA8F1DE18DA43EA0080DE6D /* FFButtonWithHourPopover.h */,
+				CDA8F1DF18DA43EA0080DE6D /* FFButtonWithHourPopover.m */,
+				CDA8F1E018DA43EA0080DE6D /* FFHourPopoverController.h */,
+				CDA8F1E118DA43EA0080DE6D /* FFHourPopoverController.m */,
+			);
+			path = FFButtonWithTimePopover;
+			sourceTree = "<group>";
+		};
+		CDA8F1E618DA43EA0080DE6D /* FFGuestsTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CDA8F1E718DA43EA0080DE6D /* FFGuestsTableView.h */,
+				CDA8F1E818DA43EA0080DE6D /* FFGuestsTableView.m */,
+				CDA8F1E918DA43EA0080DE6D /* FFGuestsTableViewCell.h */,
+				CDA8F1EA18DA43EA0080DE6D /* FFGuestsTableViewCell.m */,
+			);
+			path = FFGuestsTableViewCell;
+			sourceTree = "<group>";
+		};
+		CDA8F1EB18DA43EA0080DE6D /* FFSearchBarWithAutoComplete */ = {
+			isa = PBXGroup;
+			children = (
+				CDA8F1EC18DA43EA0080DE6D /* FFSearchBarWithAutoComplete.h */,
+				CDA8F1ED18DA43EA0080DE6D /* FFSearchBarWithAutoComplete.m */,
+			);
+			path = FFSearchBarWithAutoComplete;
+			sourceTree = "<group>";
+		};
+		CDA8F1EE18DA43EA0080DE6D /* FFEventDetail View and Popover */ = {
+			isa = PBXGroup;
+			children = (
+				CDA8F1EF18DA43EA0080DE6D /* FFEventDetailPopoverController.h */,
+				CDA8F1F018DA43EA0080DE6D /* FFEventDetailPopoverController.m */,
+				CDA8F1F118DA43EA0080DE6D /* FFEventDetailView.h */,
+				CDA8F1F218DA43EA0080DE6D /* FFEventDetailView.m */,
+			);
+			path = "FFEventDetail View and Popover";
+			sourceTree = "<group>";
+		};
+		CDA8F1F418DA43EA0080DE6D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				CDA8F1F518DA43EA0080DE6D /* blackCircle.png */,
+				CDA8F1F618DA43EA0080DE6D /* redCircle.png */,
+				CDA596E219086CFA00CB4F93 /* DailyCalendar.png */,
+				CDA596E319086CFA00CB4F93 /* MonthlyCalendar.png */,
+				CDA596E419086CFA00CB4F93 /* WeeklyCalendar.png */,
+				CDA596E519086CFA00CB4F93 /* YearlyCalendar.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		CDA8F1F718DA43EA0080DE6D /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				CDA8F1F818DA43EA0080DE6D /* SVProgressHUD-Prefix.pch */,
+				CDA8F1F918DA43EA0080DE6D /* SVProgressHUD.bundle */,
+				CDA8F1FA18DA43EA0080DE6D /* SVProgressHUD.h */,
+				CDA8F1FB18DA43EA0080DE6D /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		55AFEC3818AC435C005D2B91 /* FFCalendar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55AFEC6B18AC435D005D2B91 /* Build configuration list for PBXNativeTarget "FFCalendar" */;
+			buildPhases = (
+				55AFEC3518AC435C005D2B91 /* Sources */,
+				55AFEC3618AC435C005D2B91 /* Frameworks */,
+				55AFEC3718AC435C005D2B91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FFCalendar;
+			productName = FFCalender;
+			productReference = 55AFEC3918AC435C005D2B91 /* FFCalendar.app */;
+			productType = "com.apple.product-type.application";
+		};
+		55AFEC5818AC435D005D2B91 /* FFCalendarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55AFEC6E18AC435D005D2B91 /* Build configuration list for PBXNativeTarget "FFCalendarTests" */;
+			buildPhases = (
+				55AFEC5518AC435D005D2B91 /* Sources */,
+				55AFEC5618AC435D005D2B91 /* Frameworks */,
+				55AFEC5718AC435D005D2B91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				55AFEC6018AC435D005D2B91 /* PBXTargetDependency */,
+			);
+			name = FFCalendarTests;
+			productName = FFCalenderTests;
+			productReference = 55AFEC5918AC435D005D2B91 /* FFCalendarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		55AFEC3118AC435C005D2B91 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Fernanda G. Geraissate";
+				TargetAttributes = {
+					55AFEC5818AC435D005D2B91 = {
+						TestTargetID = 55AFEC3818AC435C005D2B91;
+					};
+				};
+			};
+			buildConfigurationList = 55AFEC3418AC435C005D2B91 /* Build configuration list for PBXProject "FFCalendar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 55AFEC3018AC435C005D2B91;
+			productRefGroup = 55AFEC3A18AC435C005D2B91 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				55AFEC3818AC435C005D2B91 /* FFCalendar */,
+				55AFEC5818AC435D005D2B91 /* FFCalendarTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		55AFEC3718AC435C005D2B91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDA596E819086CFA00CB4F93 /* WeeklyCalendar.png in Resources */,
+				CDA8F22F18DA43EA0080DE6D /* SVProgressHUD.bundle in Resources */,
+				55AFEC4918AC435D005D2B91 /* InfoPlist.strings in Resources */,
+				CDA596E719086CFA00CB4F93 /* MonthlyCalendar.png in Resources */,
+				CDA8F22E18DA43EA0080DE6D /* redCircle.png in Resources */,
+				CDA596E919086CFA00CB4F93 /* YearlyCalendar.png in Resources */,
+				CDA596E619086CFA00CB4F93 /* DailyCalendar.png in Resources */,
+				CDA8F22D18DA43EA0080DE6D /* blackCircle.png in Resources */,
+				55AFEC5418AC435D005D2B91 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55AFEC5718AC435D005D2B91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55AFEC6618AC435D005D2B91 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		55AFEC3518AC435C005D2B91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDA8F21118DA43EA0080DE6D /* FFWeekCollectionViewFlowLayout.m in Sources */,
+				CDA8F20818DA43EA0080DE6D /* FFMonthCollectionViewFlowLayout.m in Sources */,
+				CDA8F22118DA43EA0080DE6D /* FFEvent.m in Sources */,
+				CDA8F16E18DA3B7E0080DE6D /* FFCalendarViewController.m in Sources */,
+				CDA8F22418DA43EA0080DE6D /* FFButtonWithHourPopover.m in Sources */,
+				CDA8F21E18DA43EA0080DE6D /* UIImage+FFCustomMethods.m in Sources */,
+				CDA8F21B18DA43EA0080DE6D /* FFRedAndWhiteButton.m in Sources */,
+				CDA8F20118DA43EA0080DE6D /* FFDayCollectionView.m in Sources */,
+				CDA8F21C18DA43EA0080DE6D /* NSDate+FFDaysCount.m in Sources */,
+				CDA8F21D18DA43EA0080DE6D /* UIColor+FFMoreColors.m in Sources */,
+				CDA8F20A18DA43EA0080DE6D /* FFWeekCalendarView.m in Sources */,
+				CDA8F21518DA43EA0080DE6D /* FFMonthCellForYearCell.m in Sources */,
+				CDA8F22B18DA43EA0080DE6D /* FFEventDetailPopoverController.m in Sources */,
+				CDA8F1FD18DA43EA0080DE6D /* FFDayHeaderButton.m in Sources */,
+				CDA8F20418DA43EA0080DE6D /* FFMonthCalendarView.m in Sources */,
+				CDA8F1FF18DA43EA0080DE6D /* FFDayHeaderCollectionView.m in Sources */,
+				55AFEC5218AC435D005D2B91 /* FFCalendar.xcdatamodeld in Sources */,
+				CDA8F23018DA43EA0080DE6D /* SVProgressHUD.m in Sources */,
+				CDA8F21318DA43EA0080DE6D /* FFYearCalendarView.m in Sources */,
+				CDA8F22A18DA43EA0080DE6D /* FFSearchBarWithAutoComplete.m in Sources */,
+				CDA8F23618DA45DC0080DE6D /* AppDelegate.m in Sources */,
+				CDA8F22818DA43EA0080DE6D /* FFGuestsTableView.m in Sources */,
+				CDA8F1FE18DA43EA0080DE6D /* FFDayHeaderCell.m in Sources */,
+				CDA8F22318DA43EA0080DE6D /* FFDatePopoverController.m in Sources */,
+				CDA8F22618DA43EA0080DE6D /* FFEditEventPopoverController.m in Sources */,
+				CDA8F1FC18DA43EA0080DE6D /* FFDayCalendarView.m in Sources */,
+				CDA8F21818DA43EA0080DE6D /* FFYearCollectionView.m in Sources */,
+				CDA8F21F18DA43EA0080DE6D /* UILabel+FFCustomMethods.m in Sources */,
+				CDA8F20E18DA43EA0080DE6D /* FFViewWithHourLines.m in Sources */,
+				CDA8F20018DA43EA0080DE6D /* FFDayCell.m in Sources */,
+				CDA8F20618DA43EA0080DE6D /* FFMonthCell.m in Sources */,
+				CDA8F21A18DA43EA0080DE6D /* FFBlueButton.m in Sources */,
+				CDA8F16C18DA3B7E0080DE6D /* FFAddEventPopoverController.m in Sources */,
+				CDA8F20518DA43EA0080DE6D /* FFButtonWithEditAndDetailPopoversForMonthCell.m in Sources */,
+				CDA8F21218DA43EA0080DE6D /* FFWeekScrollView.m in Sources */,
+				CDA8F22918DA43EA0080DE6D /* FFGuestsTableViewCell.m in Sources */,
+				CDA8F20318DA43EA0080DE6D /* FFDayScrollView.m in Sources */,
+				CDA8F20218DA43EA0080DE6D /* FFDayCollectionViewFlowLayout.m in Sources */,
+				CDA8F21618DA43EA0080DE6D /* FFMonthCollectionViewForYearCell.m in Sources */,
+				CDA8F22518DA43EA0080DE6D /* FFHourPopoverController.m in Sources */,
+				CDA8F20918DA43EA0080DE6D /* FFMonthHeaderView.m in Sources */,
+				CDA8F20718DA43EA0080DE6D /* FFMonthCollectionView.m in Sources */,
+				CDA8F20D18DA43EA0080DE6D /* FFHourAndMinLabel.m in Sources */,
+				CDA8F21418DA43EA0080DE6D /* FFHeaderMonthForYearCell.m in Sources */,
+				CDA8F20F18DA43EA0080DE6D /* FFWeekCell.m in Sources */,
+				CDA8F20C18DA43EA0080DE6D /* FFWeekHeaderCollectionView.m in Sources */,
+				CDA8F22718DA43EA0080DE6D /* FFEditEventView.m in Sources */,
+				CDA8F22C18DA43EA0080DE6D /* FFEventDetailView.m in Sources */,
+				CDA8F21918DA43EA0080DE6D /* FFYearCollectionViewFlowLayout.m in Sources */,
+				55AFEC4B18AC435D005D2B91 /* main.m in Sources */,
+				CDA8F21718DA43EA0080DE6D /* FFYearCell.m in Sources */,
+				CDA8F22018DA43EA0080DE6D /* FFDateManager.m in Sources */,
+				CDA8F21018DA43EA0080DE6D /* FFWeekCollectionView.m in Sources */,
+				CDA8F22218DA43EA0080DE6D /* FFButtonWithDatePopover.m in Sources */,
+				CDA8F20B18DA43EA0080DE6D /* FFWeekHeaderCell.m in Sources */,
+				CDA8F16D18DA3B7E0080DE6D /* FFButtonAddEventWithPopover.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55AFEC5518AC435D005D2B91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55AFEC6818AC435D005D2B91 /* FFCalendarTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		55AFEC6018AC435D005D2B91 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55AFEC3818AC435C005D2B91 /* FFCalendar */;
+			targetProxy = 55AFEC5F18AC435D005D2B91 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		55AFEC4718AC435D005D2B91 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55AFEC4818AC435D005D2B91 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		55AFEC6418AC435D005D2B91 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55AFEC6518AC435D005D2B91 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		55AFEC6918AC435D005D2B91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		55AFEC6A18AC435D005D2B91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		55AFEC6C18AC435D005D2B91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FFCalendar/FFCalendar-Prefix.pch";
+				INFOPLIST_FILE = "FFCalendar/FFCalendar-Info.plist";
+				PRODUCT_NAME = FFCalendar;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		55AFEC6D18AC435D005D2B91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FFCalendar/FFCalendar-Prefix.pch";
+				INFOPLIST_FILE = "FFCalendar/FFCalendar-Info.plist";
+				PRODUCT_NAME = FFCalendar;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		55AFEC6F18AC435D005D2B91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FFCalender.app/FFCalender";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FFCalender/FFCalender-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "FFCalenderTests/FFCalendarTests-Info.plist";
+				PRODUCT_NAME = FFCalendarTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		55AFEC7018AC435D005D2B91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FFCalender.app/FFCalender";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FFCalender/FFCalender-Prefix.pch";
+				INFOPLIST_FILE = "FFCalenderTests/FFCalendarTests-Info.plist";
+				PRODUCT_NAME = FFCalendarTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		55AFEC3418AC435C005D2B91 /* Build configuration list for PBXProject "FFCalendar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55AFEC6918AC435D005D2B91 /* Debug */,
+				55AFEC6A18AC435D005D2B91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55AFEC6B18AC435D005D2B91 /* Build configuration list for PBXNativeTarget "FFCalendar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55AFEC6C18AC435D005D2B91 /* Debug */,
+				55AFEC6D18AC435D005D2B91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55AFEC6E18AC435D005D2B91 /* Build configuration list for PBXNativeTarget "FFCalendarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55AFEC6F18AC435D005D2B91 /* Debug */,
+				55AFEC7018AC435D005D2B91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		55AFEC5018AC435D005D2B91 /* FFCalendar.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				55AFEC5118AC435D005D2B91 /* FFCalendar.xcdatamodel */,
+			);
+			currentVersion = 55AFEC5118AC435D005D2B91 /* FFCalendar.xcdatamodel */;
+			path = FFCalendar.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 55AFEC3118AC435C005D2B91 /* Project object */;
+}

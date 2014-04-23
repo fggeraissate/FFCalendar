@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>65E0B842-E6D2-4D07-9B67-3820D2ECCDD0</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FFCalendar</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>210D2761-5BBC-4B69-AC66-ECA7AF762807</key>
+		<string>https://bitbucket.org/kamikazebr/ffcalendar</string>
+		<key>3FE7B5DF-920A-4A24-B4CF-22D2C904748C</key>
+		<string>https://bitbucket.org/kamikazebr/ffcalendar</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>FFCalendar.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>210D2761-5BBC-4B69-AC66-ECA7AF762807</key>
+		<string>../../FFCalendar</string>
+		<key>3FE7B5DF-920A-4A24-B4CF-22D2C904748C</key>
+		<string>../../ffcalendar</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://bitbucket.org/kamikazebr/ffcalendar</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>210D2761-5BBC-4B69-AC66-ECA7AF762807</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3FE7B5DF-920A-4A24-B4CF-22D2C904748C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ffcalendar</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>210D2761-5BBC-4B69-AC66-ECA7AF762807</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FFCalendar</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>210D2761-5BBC-4B69-AC66-ECA7AF762807</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FFCalendar</string>
+		</dict>
+	</array>
+</dict>
+</plist>
