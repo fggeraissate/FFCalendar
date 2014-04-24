@@ -1,6 +1,5 @@
 FFCalendar
 ==========
-
 This project tries to reproduce the Yearly, Monthly, Weekly and Daily Calendars which are found in iOS system.
 
 Limitations: 
@@ -14,10 +13,8 @@ Limitations:
 <img src="https://raw.githubusercontent.com/fggeraissate/FFCalendar/master/FFCalendar/FFCalendars/Util/Images/DailyCalendar.png" alt="Daily Calendar for iOS" width="300" height="401"/>
 
 ## License
-
-`FFCalendar` is released under the [MIT license](https://github.com/fggeraissate/FFCalendar/blob/master/LICENSE).
+`FFCalendar` is available under the [MIT license](https://github.com/fggeraissate/FFCalendar/blob/master/LICENSE).
 
 ## About me
-
 See my portfolio or contact me at: http://fernandasportfolio.tumblr.com
 
