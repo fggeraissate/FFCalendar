@@ -8,12 +8,16 @@ Limitations:
 - Supports portrait mode only
 - Works on iOS 7 and above
 
-![Alt text](https://raw.githubusercontent.com/fggeraissate/FFCalendar/master/FFCalendar/FFCalendars/Util/Images/YearlyCalendar.png "Yearly Calendar for iOS")
-![Alt text](https://raw.githubusercontent.com/fggeraissate/FFCalendar/master/FFCalendar/FFCalendars/Util/Images/MonthlyCalendar.png "Monthly Calendar for iOS")
-![Alt text](https://raw.githubusercontent.com/fggeraissate/FFCalendar/master/FFCalendar/FFCalendars/Util/Images/WeeklyCalendar.png "Weekly Calendar for iOS")
-![Alt text](https://raw.githubusercontent.com/fggeraissate/FFCalendar/master/FFCalendar/FFCalendars/Util/Images/DailyCalendar.png "Daily Calendar for iOS")
+<img src="https://raw.githubusercontent.com/fggeraissate/FFCalendar/master/FFCalendar/FFCalendars/Util/Images/YearlyCalendar.png" alt="Yearly Calendar for iOS" width="300" height="401"/>
+<img src="https://raw.githubusercontent.com/fggeraissate/FFCalendar/master/FFCalendar/FFCalendars/Util/Images/MonthlyCalendar.png" alt="Monthly Calendar for iOS" width="300" height="401"/>
+<img src="https://raw.githubusercontent.com/fggeraissate/FFCalendar/master/FFCalendar/FFCalendars/Util/Images/WeeklyCalendar.png" alt="Weekly Calendar for iOS" width="300" height="401"/>
+<img src="https://raw.githubusercontent.com/fggeraissate/FFCalendar/master/FFCalendar/FFCalendars/Util/Images/DailyCalendar.png" alt="Daily Calendar for iOS" width="300" height="401"/>
 
-About me
-==========
+## License
+
+`FFCalendar` is released under the [MIT license](https://github.com/fggeraissate/FFCalendar/blob/master/LICENSE).
+
+## About me
 
 See my portfolio or contact me at: http://fernandasportfolio.tumblr.com
+
