@@ -1,4 +1,4 @@
-FFCalendar
+FFCalendar (beta version)
 ==========
 This project tries to reproduce the Yearly, Monthly, Weekly and Daily Calendars which are found in iOS system.
 
