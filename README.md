@@ -1,6 +1,6 @@
 FFCalendar (beta)
 ==========
-This project tries to reproduce the Yearly, Monthly, Weekly and Daily Calendars which are found in iOS system.
+Yearly, Monthly, Weekly and Daily Calendars for iOS.
 
 Limitations: 
 - For iPad only
