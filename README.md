@@ -39,7 +39,6 @@ On the other hand, if you enjoyed the `FFCalendarViewController`'s view as it is
 }
 
 - (NSMutableArray *)arrayWithEvents {
-    
     FFEvent *event1 = [FFEvent new];
     [event1 setStringCustomerName: @"Customer A"];
     [event1 setNumCustomerID:@1];
