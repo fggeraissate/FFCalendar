@@ -26,6 +26,7 @@ On the other hand, if you enjoyed the `FFCalendarViewController`'s view as it is
 
 ```python
 - (void)displayFFCalendar {
+
     FFCalendarViewController *calendarVc = [FFCalendarViewController new];
     [calendarVc setProtocol:self];
     [calendarVc setArrayWithEvents:[self arrayWithEvents]];
@@ -39,6 +40,7 @@ On the other hand, if you enjoyed the `FFCalendarViewController`'s view as it is
 }
 
 - (NSMutableArray *)arrayWithEvents {
+
     FFEvent *event1 = [FFEvent new];
     [event1 setStringCustomerName: @"Customer A"];
     [event1 setNumCustomerID:@1];
@@ -47,7 +49,7 @@ On the other hand, if you enjoyed the `FFCalendarViewController`'s view as it is
     [event1 setDateTimeEnd:[NSDate dateWithHour:15 min:13]];
     [event1 setArrayWithGuests:[NSMutableArray arrayWithArray:@[@[@111, @"Guest 2", @"email2@email.com"], @[@111, @"Guest 4", @"email4@email.com"], @[@111, @"Guest 5", @"email5@email.com"], @[@111, @"Guest 7", @"email7@email.com"]]]];
     
-    return [NSMutableArray arrayWithArray:@[event1, event2];
+    return [NSMutableArray arrayWithArray:@[event1];
 }
 ```
 
