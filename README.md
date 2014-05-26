@@ -16,7 +16,7 @@ Limitations:
 Basic usage is implemented in `FFCalendarViewController`. First you should import `FFCalendar.h` in `FFCalendarViewController` and `FFImportantFilesForCalendar.h` in `Prefix.pch` file. Then, subclass `FFYearCalendarView`, `FFMonthCalendarView`, `FFWeekCalendarView` and `FFDayCalendarView`. Also set the respective protocols, they will always provide the last modified dictionary (which I called `dictEvents`), and hence, they will help to update the others calendars. 
 
 The `dictEvents` is formed by events (`FFEvent`) and their dates. Inside `FFEvent` you will find:
-- `stringCustomerName`: the name of the Customer
+- `stringCustomerName`: the name of the customer
 - `dateDay`: informs the day, month and year when the event will happen
 - `dateTimeBegin`: the hour and minute when the event will begin
 - `dateTimeEnd`: the hour and minute when the event will end
