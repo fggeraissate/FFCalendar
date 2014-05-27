@@ -46,7 +46,7 @@
         [self setDataSource:self];
         [self setDelegate:self];
         
-        [self setBackgroundColor:[UIColor cinzaClaro]];
+        [self setBackgroundColor:[UIColor lightGrayCustom]];
         
         [self registerClass:[FFWeekCell class] forCellWithReuseIdentifier:REUSE_IDENTIFIER_MONTH_CELL];
         

@@ -29,7 +29,7 @@ static UIImage *imageCircleBlack;
         
         [[UIImageView appearanceWhenContainedIn:[FFDayHeaderButton class], nil] setContentMode:UIViewContentModeScaleAspectFit];
         
-        [self setBackgroundColor:[UIColor cinzaSuperClaro]];
+        [self setBackgroundColor:[UIColor lighterGrayCustom]];
         [self setContentMode:UIViewContentModeScaleAspectFit];
 
         if (!imageCircleBlack) {

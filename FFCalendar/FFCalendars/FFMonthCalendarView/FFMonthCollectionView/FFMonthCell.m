@@ -70,7 +70,7 @@
 
 - (void)markAsWeekend {
     
-    [self setBackgroundColor:[UIColor cinzaSuperClaro]];
+    [self setBackgroundColor:[UIColor lighterGrayCustom]];
     [self.labelDay setTextColor:[UIColor grayColor]];
 }
 

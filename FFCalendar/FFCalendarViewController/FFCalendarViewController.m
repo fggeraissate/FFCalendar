@@ -61,9 +61,9 @@
     
     [self buttonTodayAction:nil];
     
-    [self addSubviews];
+    [self addCalendars];
     
-    [self bringCalendarToFrontAndSelectButton:[arrayButtons objectAtIndex:0]];
+    [self buttonYearMonthWeekDayAction:[arrayButtons objectAtIndex:0]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -110,31 +110,25 @@
         self.edgesForExtendedLayout = UIRectEdgeNone;
     }
     self.navigationController.navigationBar.translucent = NO;
-    [self.navigationController.navigationBar setBarTintColor:[UIColor cinzaSuperClaro]];
+    [self.navigationController.navigationBar setBarTintColor:[UIColor lighterGrayCustom]];
     
-    // --------------- //
+    [self addRightBarButtonItems];
+    [self addLeftBarButtonItems];
+}
+
+- (void)addRightBarButtonItems {
     
     UIBarButtonItem *fixedItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
     fixedItem.width = 30.;
     
-    FFRedAndWhiteButton *buttonYear = [[FFRedAndWhiteButton alloc] initWithFrame:CGRectMake(0., 0., 80., 30.)];
-    [buttonYear addTarget:self action:@selector(buttonYearAction:) forControlEvents:UIControlEventTouchUpInside];
-    [buttonYear setTitle:@"year" forState:UIControlStateNormal];
+    FFRedAndWhiteButton *buttonYear = [self calendarButtonWithTitle:@"year"];
+    FFRedAndWhiteButton *buttonMonth = [self calendarButtonWithTitle:@"month"];
+    FFRedAndWhiteButton *buttonWeek = [self calendarButtonWithTitle:@"week"];
+    FFRedAndWhiteButton *buttonDay = [self calendarButtonWithTitle:@"day"];
+    
     UIBarButtonItem *barButtonYear = [[UIBarButtonItem alloc] initWithCustomView:buttonYear];
-    
-    FFRedAndWhiteButton *buttonMonth = [[FFRedAndWhiteButton alloc] initWithFrame:CGRectMake(0., 0., 80., 30.)];
-    [buttonMonth addTarget:self action:@selector(buttonMonthAction:) forControlEvents:UIControlEventTouchUpInside];
-    [buttonMonth setTitle:@"month" forState:UIControlStateNormal];
     UIBarButtonItem *barButtonMonth = [[UIBarButtonItem alloc] initWithCustomView:buttonMonth];
-    
-    FFRedAndWhiteButton *buttonWeek = [[FFRedAndWhiteButton alloc] initWithFrame:CGRectMake(0., 0., 80., 30.)];
-    [buttonWeek addTarget:self action:@selector(buttonWeekAction:) forControlEvents:UIControlEventTouchUpInside];
-    [buttonWeek setTitle:@"week" forState:UIControlStateNormal];
     UIBarButtonItem *barButtonWeek = [[UIBarButtonItem alloc] initWithCustomView:buttonWeek];
-    
-    FFRedAndWhiteButton *buttonDay = [[FFRedAndWhiteButton alloc] initWithFrame:CGRectMake(0., 0., 80., 30.)];
-    [buttonDay addTarget:self action:@selector(buttonDayAction:) forControlEvents:UIControlEventTouchUpInside];
-    [buttonDay setTitle:@"day" forState:UIControlStateNormal];
     UIBarButtonItem *barButtonDay = [[UIBarButtonItem alloc] initWithCustomView:buttonDay];
     
     FFButtonAddEventWithPopover *buttonAdd = [[FFButtonAddEventWithPopover alloc] initWithFrame:CGRectMake(0., 0., 30., 44)];
@@ -142,10 +136,13 @@
     UIBarButtonItem *barButtonAdd = [[UIBarButtonItem alloc] initWithCustomView:buttonAdd];
     
     arrayButtons = @[buttonYear, buttonMonth, buttonWeek, buttonDay];
-    
     [self.navigationItem setRightBarButtonItems:@[barButtonAdd, fixedItem, barButtonYear, barButtonMonth, barButtonWeek, barButtonDay]];
+}
+
+- (void)addLeftBarButtonItems {
     
-    // --------------- //
+    UIBarButtonItem *fixedItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+    fixedItem.width = 30.;
     
     FFRedAndWhiteButton *buttonToday = [[FFRedAndWhiteButton alloc] initWithFrame:CGRectMake(0., 0., 80., 30)];
     [buttonToday addTarget:self action:@selector(buttonTodayAction:) forControlEvents:UIControlEventTouchUpInside];
@@ -160,7 +157,17 @@
     [self.navigationItem setLeftBarButtonItems:@[barButtonLabel, fixedItem, barButtonToday]];
 }
 
-- (void)addSubviews {
+- (FFRedAndWhiteButton *)calendarButtonWithTitle:(NSString *)title {
+    
+    FFRedAndWhiteButton *button = [[FFRedAndWhiteButton alloc] initWithFrame:CGRectMake(0., 0., 80., 30.)];
+    [button addTarget:self action:@selector(buttonYearMonthWeekDayAction:) forControlEvents:UIControlEventTouchUpInside];
+    [button setTitle:title forState:UIControlStateNormal];
+    return button;
+}
+
+#pragma mark - Add Calendars
+
+- (void)addCalendars {
     
     viewCalendarYear = [[FFYearCalendarView alloc] initWithFrame:CGRectMake(0., 0., self.view.frame.size.width, self.view.frame.size.height-self.navigationController.navigationBar.frame.size.height-self.navigationController.navigationBar.frame.origin.y)];
     [viewCalendarYear setProtocol:self];
@@ -186,32 +193,12 @@
 
 #pragma mark - Button Action
 
-- (IBAction)buttonYearAction:(id)sender {
+- (IBAction)buttonYearMonthWeekDayAction:(id)sender {
     
-    [self bringCalendarToFrontAndSelectButton:sender];
-}
-
-- (IBAction)buttonMonthAction:(id)sender {
-    
-    [self bringCalendarToFrontAndSelectButton:sender];
-}
-
-- (IBAction)buttonWeekAction:(id)sender {
-    
-    [self bringCalendarToFrontAndSelectButton:sender];
-}
-
-- (IBAction)buttonDayAction:(id)sender {
-    
-    [self bringCalendarToFrontAndSelectButton:sender];
-}
-
-- (void)bringCalendarToFrontAndSelectButton:(UIButton *)buttonSelected {
-    
-    [self.view bringSubviewToFront:[arrayCalendars objectAtIndex:[arrayButtons indexOfObject:buttonSelected]]];
+    [self.view bringSubviewToFront:[arrayCalendars objectAtIndex:[arrayButtons indexOfObject:sender]]];
     
     for (UIButton *button in arrayButtons) {
-        button.selected = (button == buttonSelected);
+        button.selected = (button == sender);
     }
 }
 
@@ -249,6 +236,13 @@
     [self arrayUpdatedWithAllEvents];
 }
 
+#pragma mark - FFYearCalendarView Protocol
+
+- (void)showMonthCalendar {
+    
+    [self buttonYearMonthWeekDayAction:[arrayButtons objectAtIndex:1]];
+}
+
 #pragma mark - Sending Updated Array to FFCalendarViewController Protocol
 
 - (void)arrayUpdatedWithAllEvents {
@@ -266,13 +260,6 @@
     if (protocol != nil && [protocol respondsToSelector:@selector(arrayUpdatedWithAllEvents:)]) {
         [protocol arrayUpdatedWithAllEvents:arrayNew];
     }
-}
-
-#pragma mark - FFYearCalendarView Protocol
-
-- (void)showMonthCalendar {
-    
-    [self bringCalendarToFrontAndSelectButton:[arrayButtons objectAtIndex:1]];
 }
 
 @end

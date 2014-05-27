@@ -77,7 +77,7 @@
     
     // SVProgressHUD
     [[SVProgressHUD sharedView] setTintColor:[UIColor blackColor]];
-    [[SVProgressHUD sharedView] setBackgroundColor:[UIColor cinzaSuperClaro]];
+    [[SVProgressHUD sharedView] setBackgroundColor:[UIColor lighterGrayCustom]];
     
     FFEvent *eventNew = [FFEvent new];
     eventNew.stringCustomerName = searchBarCustom.stringClientName;
@@ -125,8 +125,8 @@
     
     UIView *viewCustom = [[UIView alloc] initWithFrame:frame];
     
-    [viewCustom setBackgroundColor:[UIColor cinzaClaro]];
-    [viewCustom.layer setBorderColor:[UIColor cinzaClaro].CGColor];
+    [viewCustom setBackgroundColor:[UIColor lightGrayCustom]];
+    [viewCustom.layer setBorderColor:[UIColor lightGrayCustom].CGColor];
     [viewCustom.layer setBorderWidth:2.];
     
     [self addButtonCancelWithCustomView:viewCustom];
@@ -149,7 +149,7 @@
 - (void)addButtonCancelWithCustomView:(UIView *)customView {
     
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, customView.frame.size.width, BUTTON_HEIGHT+30)];
-    [view setBackgroundColor:[UIColor cinzaSuperClaro]];
+    [view setBackgroundColor:[UIColor lighterGrayCustom]];
     [customView addSubview:view];
     
     buttonCancel = [UIButton buttonWithType:UIButtonTypeCustom];

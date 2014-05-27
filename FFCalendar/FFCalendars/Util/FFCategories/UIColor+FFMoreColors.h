@@ -12,7 +12,7 @@
 
 @interface UIColor (FFMoreColors)
 
-+ (UIColor *)cinzaSuperClaro;
-+ (UIColor *)cinzaClaro;
++ (UIColor *)lighterGrayCustom;
++ (UIColor *)lightGrayCustom;
 
 @end

@@ -107,7 +107,7 @@
     if (cell == nil) {
         cell = [[ UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:REUSE_IDENTIFIER_MONTH_CELL];
     }
-    [cell setBackgroundColor:[UIColor cinzaClaro]];
+    [cell setBackgroundColor:[UIColor lightGrayCustom]];
     
     NSArray *arrayCell = [arrayOfTableView objectAtIndex:indexPath.row];
     

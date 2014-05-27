@@ -71,7 +71,7 @@
                 CGFloat width = [labelHourMin widthThatWouldFit];
                 
                 UIView *view = [[UIView alloc] initWithFrame:CGRectMake(labelHourMin.frame.origin.x+width+10, HEIGHT_CELL_MIN/2., self.frame.size.width-labelHourMin.frame.origin.x-width-20, 1.)];
-                [view setBackgroundColor:[UIColor cinzaClaro]];
+                [view setBackgroundColor:[UIColor lightGrayCustom]];
                 [labelHourMin addSubview:view];
             }
             [self addSubview:labelHourMin];

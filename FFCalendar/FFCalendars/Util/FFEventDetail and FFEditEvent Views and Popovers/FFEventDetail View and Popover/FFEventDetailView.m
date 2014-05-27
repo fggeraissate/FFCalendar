@@ -56,7 +56,7 @@
         
         event = _event;
         
-        [self.layer setBorderColor:[UIColor cinzaClaro].CGColor];
+        [self.layer setBorderColor:[UIColor lightGrayCustom].CGColor];
         [self.layer setBorderWidth:2.];
         
         [self addButtonEditPopoverWithViewSize:frame.size];
@@ -78,7 +78,7 @@
         
         event = eventInit;
         
-        [self.layer setBorderColor:[UIColor cinzaClaro].CGColor];
+        [self.layer setBorderColor:[UIColor lightGrayCustom].CGColor];
         [self.layer setBorderWidth:2.];
         
         [self addButtonEditPopoverWithViewSize:size];

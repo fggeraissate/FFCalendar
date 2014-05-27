@@ -12,11 +12,11 @@
 
 @implementation UIColor (FFMoreColors)
 
-+ (UIColor *)cinzaSuperClaro {
++ (UIColor *)lighterGrayCustom {
     return [UIColor colorWithWhite:0.95 alpha:1];
 }
 
-+ (UIColor *)cinzaClaro {
++ (UIColor *)lightGrayCustom {
    return [UIColor colorWithWhite:0.9 alpha:1];
 }
 
