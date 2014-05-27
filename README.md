@@ -32,9 +32,9 @@ On the other hand, if you enjoyed the `FFCalendarViewController`'s view as it is
     [calendarVc setArrayWithEvents:[self arrayWithEvents]];
     
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:calendarVc];
+    navigationController.view.frame = CGRectMake(0., 0., self.view.frame.size.width, self.view.frame.size.height);
 
     [self addChildViewController:navigationController];
-    navigationController.view.frame = CGRectMake(0., 0., self.view.frame.size.width, self.view.frame.size.height);
     [self.view addSubview:navigationController.view];
     [navigationController didMoveToParentViewController:self];
 }
