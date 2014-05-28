@@ -19,4 +19,6 @@
 
 @property (nonatomic, strong) id<FFYearCalendarViewProtocol> protocol;
 
+- (void)invalidateLayout;
+
 @end

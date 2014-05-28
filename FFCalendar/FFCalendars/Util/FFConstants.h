@@ -50,6 +50,9 @@ typedef enum ScrollDirection {
 #define Customer_ID @"idCustomer"
 #define Customer_NOME @"nmCustomer"
 
+#define AR_WIDTH_HEIGHT UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight
+#define AR_TOP_BOTTOM UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin
+
 @interface FFConstants
 
 @end

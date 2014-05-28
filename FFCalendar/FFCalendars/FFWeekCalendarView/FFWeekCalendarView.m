@@ -36,6 +36,8 @@
         // Initialization code
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dateChanged:) name:DATE_MANAGER_DATE_CHANGED object:nil];
         [self setBackgroundColor:[UIColor whiteColor]];
+        
+        [self setAutoresizingMask: AR_WIDTH_HEIGHT];
     }
     return self;
 }

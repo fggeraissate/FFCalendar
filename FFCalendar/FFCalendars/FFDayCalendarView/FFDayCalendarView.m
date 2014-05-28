@@ -51,6 +51,8 @@
         [self addGestureRecognizer:gesture];
         
         boolAnimate = NO;
+        
+        [self setAutoresizingMask: AR_WIDTH_HEIGHT];
     }
     return self;
 }

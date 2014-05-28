@@ -59,7 +59,6 @@
         [self setDelegate:self];
         
         [self registerClass:[FFYearCell class] forCellWithReuseIdentifier:REUSE_IDENTIFIER_MONTH_CELL];
-        //        [self registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:REUSE_IDENTIFIER_MONTH_HEADER];
         
         [self setScrollEnabled:YES];
         [self setPagingEnabled:YES];
@@ -90,18 +89,6 @@
     return cell;
 }
 
-//- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
-//    
-//    UICollectionReusableView *reusableview = nil;
-//    
-//    if (kind == UICollectionElementKindSectionHeader) {
-//        UICollectionReusableView *headerView = (UICollectionReusableView *)[collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:REUSE_IDENTIFIER_MONTH_HEADER forIndexPath:indexPath];
-//        reusableview = headerView;
-//    }
-//    
-//    return  reusableview;
-//}
-
 #pragma mark - UICollectionView Delegate
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -116,17 +103,16 @@
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-   sizeOfCell =  CGSizeMake((self.frame.size.width-2.*SPACE_COLLECTIONVIEW_CELL_YEAR)/3., (self.frame.size.height-3.*SPACE_COLLECTIONVIEW_CELL_YEAR)/4.);
+    BOOL isLandscape = (UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation));
+    
+    NSInteger lines = isLandscape?3:4;
+    NSInteger columns = isLandscape?4:3;
+    
+    sizeOfCell = CGSizeMake((self.frame.size.width-(columns-1)*SPACE_COLLECTIONVIEW_CELL_YEAR)/columns,
+                            (self.frame.size.height-(lines-1)*SPACE_COLLECTIONVIEW_CELL_YEAR)/lines);
     
     return sizeOfCell;
 }
-
-//- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
-//    
-//    CGSize headerViewSize = CGSizeMake(self.frame.size.width, HEADER_HEIGHT_MONTH);
-//    
-//    return headerViewSize;
-//}
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
 

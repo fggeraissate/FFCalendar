@@ -13,6 +13,7 @@
 #import "FFCalendar.h"
 
 @interface FFCalendarViewController () <FFButtonAddEventWithPopoverProtocol, FFYearCalendarViewProtocol, FFMonthCalendarViewProtocol, FFWeekCalendarViewProtocol, FFDayCalendarViewProtocol>
+@property (nonatomic) BOOL boolDidLoad;
 @property (nonatomic, strong) NSMutableDictionary *dictEvents;
 @property (nonatomic, strong) UILabel *labelWithMonthAndYear;
 @property (nonatomic, strong) NSArray *arrayButtons;
@@ -28,6 +29,7 @@
 
 #pragma mark - Synthesize
 
+@synthesize boolDidLoad;
 @synthesize protocol;
 @synthesize arrayWithEvents;
 @synthesize dictEvents;
@@ -59,11 +61,19 @@
 
     [self customNavigationBarLayout];
     
-    [self buttonTodayAction:nil];
-    
     [self addCalendars];
     
     [self buttonYearMonthWeekDayAction:[arrayButtons objectAtIndex:0]];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    
+    if (!boolDidLoad) {
+        boolDidLoad = YES;
+        [self buttonTodayAction:nil];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -169,7 +179,9 @@
 
 - (void)addCalendars {
     
-    viewCalendarYear = [[FFYearCalendarView alloc] initWithFrame:CGRectMake(0., 0., self.view.frame.size.width, self.view.frame.size.height-self.navigationController.navigationBar.frame.size.height-self.navigationController.navigationBar.frame.origin.y)];
+    CGRect frame = CGRectMake(0., 0., self.view.frame.size.width, self.view.frame.size.height);
+    
+    viewCalendarYear = [[FFYearCalendarView alloc] initWithFrame:frame];
     [viewCalendarYear setProtocol:self];
     [self.view addSubview:viewCalendarYear];
     
@@ -178,12 +190,12 @@
     [viewCalendarMonth setDictEvents:dictEvents];
     [self.view addSubview:viewCalendarMonth];
     
-    viewCalendarWeek = [[FFWeekCalendarView alloc] initWithFrame:CGRectMake(0., 0., self.view.frame.size.width, self.view.frame.size.height)];
+    viewCalendarWeek = [[FFWeekCalendarView alloc] initWithFrame:frame];
     [viewCalendarWeek setProtocol:self];
     [viewCalendarWeek setDictEvents:dictEvents];
     [self.view addSubview:viewCalendarWeek];
     
-    viewCalendarDay = [[FFDayCalendarView alloc] initWithFrame:CGRectMake(0., 0., self.view.frame.size.width, self.view.frame.size.height)];
+    viewCalendarDay = [[FFDayCalendarView alloc] initWithFrame:frame];
     [viewCalendarDay setProtocol:self];
     [viewCalendarDay setDictEvents:dictEvents];
     [self.view addSubview:viewCalendarDay];
@@ -207,6 +219,13 @@
     [[FFDateManager sharedManager] setCurrentDate:[NSDate dateWithYear:[NSDate componentsOfCurrentDate].year
                                                                month:[NSDate componentsOfCurrentDate].month
                                                                  day:[NSDate componentsOfCurrentDate].day]];
+}
+
+#pragma mark - Interface Rotation
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+    
+    [viewCalendarYear invalidateLayout];
 }
 
 #pragma mark - FFButtonAddEventWithPopover Protocol

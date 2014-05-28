@@ -42,6 +42,8 @@
         [collectionViewMonth setProtocol:self];
         [self dateChanged:nil];
         [self addSubview:collectionViewMonth];
+        
+        [self setAutoresizingMask: AR_WIDTH_HEIGHT];
     }
     return self;
 }
