@@ -185,7 +185,7 @@
     [viewCalendarYear setProtocol:self];
     [self.view addSubview:viewCalendarYear];
     
-    viewCalendarMonth = [[FFMonthCalendarView alloc] initWithFrame:CGRectMake(0., 0., self.view.frame.size.width, self.view.frame.size.height-self.navigationController.navigationBar.frame.size.height-self.navigationController.navigationBar.frame.origin.y)];
+    viewCalendarMonth = [[FFMonthCalendarView alloc] initWithFrame:frame];
     [viewCalendarMonth setProtocol:self];
     [viewCalendarMonth setDictEvents:dictEvents];
     [self.view addSubview:viewCalendarMonth];
@@ -226,6 +226,7 @@
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
     
     [viewCalendarYear invalidateLayout];
+    [viewCalendarMonth invalidateLayout];
 }
 
 #pragma mark - FFButtonAddEventWithPopover Protocol

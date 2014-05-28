@@ -40,10 +40,11 @@
         
         collectionViewMonth = [[FFMonthCollectionView alloc] initWithFrame:CGRectMake(0., HEADER_HEIGHT_MONTH, self.frame.size.width, self.frame.size.height-HEADER_HEIGHT_MONTH) collectionViewLayout:[UICollectionViewLayout new]];
         [collectionViewMonth setProtocol:self];
-        [self dateChanged:nil];
         [self addSubview:collectionViewMonth];
         
         [self setAutoresizingMask: AR_WIDTH_HEIGHT];
+        [collectionViewMonth setAutoresizingMask:AR_WIDTH_HEIGHT | AR_TOP_BOTTOM];
+        [view setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
     }
     return self;
 }
@@ -63,6 +64,12 @@
     
     [collectionViewMonth setDictEvents:_dictEvents];
     [collectionViewMonth reloadData];
+}
+
+#pragma mark - Invalidate Layout
+
+- (void)invalidateLayout {
+    [collectionViewMonth.collectionViewLayout invalidateLayout];
 }
 
 #pragma mark - FFDateManager Notification

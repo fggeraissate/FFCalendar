@@ -28,6 +28,7 @@
             [label setText:[arrayWeekAbrev objectAtIndex:i]];
             [label setTextColor:[arrayColor objectAtIndex:i]];
             [label setFont:[UIFont boldSystemFontOfSize:label.font.pointSize]];
+            [label setAutoresizingMask:AR_LEFT_RIGHT | UIViewAutoresizingFlexibleWidth];
             [self addSubview:label];
         }
 

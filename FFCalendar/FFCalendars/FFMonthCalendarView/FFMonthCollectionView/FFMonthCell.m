@@ -49,9 +49,11 @@
     
     if (!imageViewCircle) {
         imageViewCircle = [[UIImageView alloc] initWithFrame:CGRectMake(self.frame.size.width-32.-3., 3., 32., 32.)];
+        [imageViewCircle setAutoresizingMask:AR_LEFT_BOTTOM];
         [self addSubview:imageViewCircle];
         
         labelDay = [[UILabel alloc] initWithFrame:CGRectMake((imageViewCircle.frame.size.width-20.)/2., (imageViewCircle.frame.size.height-20.)/2., 20., 20.)];
+        [labelDay setAutoresizingMask:AR_LEFT_BOTTOM];
         [labelDay setTextAlignment:NSTextAlignmentCenter];
         [imageViewCircle addSubview:labelDay];
     }
@@ -98,6 +100,7 @@
             
             buttonOfNumber++;
             FFButtonWithEditAndDetailPopoversForMonthCell *button = [[FFButtonWithEditAndDetailPopoversForMonthCell alloc] initWithFrame:CGRectMake(0, yFirstButton+(buttonOfNumber-1)*height, self.frame.size.width, height)];
+            [button setAutoresizingMask:AR_TOP_BOTTOM | UIViewAutoresizingFlexibleWidth];
             [self addSubview:button];
             [arrayButtons addObject:button];
             
