@@ -42,9 +42,10 @@ typedef enum ScrollDirection {
 
 #define REUSE_IDENTIFIER_DAY_CELL @"dayCell"
 
+#define MINUTES_INTERVAL 4.
 #define HEIGHT_CELL_HOUR 100.
-#define HEIGHT_CELL_MIN HEIGHT_CELL_HOUR/4.
-#define MINUTES_PER_LABEL 60./4.
+#define HEIGHT_CELL_MIN HEIGHT_CELL_HOUR/MINUTES_INTERVAL
+#define MINUTES_PER_LABEL 60./MINUTES_INTERVAL
 
 #define Customer_ID @"idCustomer"
 #define Customer_NOME @"nmCustomer"

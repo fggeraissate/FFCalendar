@@ -56,7 +56,7 @@
         labelGrayWithActualHour = viewWithHourLines.labelWithSameYOfCurrentHour;
         [labelGrayWithActualHour setAlpha:0.];
         
-        [self setContentSize:CGSizeMake(self.frame.size.width, collectionViewWeek.frame.origin.y+collectionViewWeek.frame.size.height)];
+        [self setContentSize:CGSizeMake(self.frame.size.width, collectionViewWeek.frame.origin.y+collectionViewWeek.frame.size.height+((MINUTES_INTERVAL-1)*HEIGHT_CELL_MIN))];
         [self scrollRectToVisible:CGRectMake(0., labelWithActualHour.frame.origin.y, self.frame.size.width, self.frame.size.height) animated:YES];
     }
     

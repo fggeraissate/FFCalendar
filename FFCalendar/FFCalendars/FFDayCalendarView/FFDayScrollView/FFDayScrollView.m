@@ -58,7 +58,7 @@
         labelWithActualHour = [viewWithHourLines labelWithCurrentHourWithWidth:self.frame.size.width];
         [labelWithActualHour setFrame:CGRectMake(labelWithActualHour.frame.origin.x, labelWithActualHour.frame.origin.y+viewWithHourLines.frame.origin.y, labelWithActualHour.frame.size.width, labelWithActualHour.frame.size.height)];
         
-        [self setContentSize:CGSizeMake(self.frame.size.width, collectionViewDay.frame.origin.y+collectionViewDay.frame.size.height)];
+        [self setContentSize:CGSizeMake(self.frame.size.width, collectionViewDay.frame.origin.y+collectionViewDay.frame.size.height+((MINUTES_INTERVAL-1)*HEIGHT_CELL_MIN))];
         [self scrollRectToVisible:CGRectMake(0, labelWithActualHour.frame.origin.y, self.frame.size.width, self.frame.size.height) animated:NO];
     }
     
