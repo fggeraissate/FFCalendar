@@ -54,6 +54,8 @@
         
         boolGoNext = NO;
         boolGoPrevious = NO;
+        
+        [self setAutoresizingMask:AR_WIDTH_HEIGHT];
     }
     return self;
 }

@@ -83,6 +83,13 @@
     [dayContainerScroll.collectionViewDay setProtocol:self];
 }
 
+#pragma mark - Invalidate Layout
+
+- (void)invalidateLayout {
+    [collectionViewHeaderDay.collectionViewLayout invalidateLayout];
+    [dayContainerScroll.collectionViewDay.collectionViewLayout invalidateLayout];
+}
+
 #pragma mark - FFDateManager Notification
 
 - (void)dateChanged:(NSNotification *)not {
@@ -145,6 +152,7 @@
     viewDetail = nil;
     
    viewDetail = [[FFEventDetailView alloc] initWithFrame:CGRectMake(self.frame.size.width/2., HEADER_HEIGHT_SCROLL, self.frame.size.width/2., self.frame.size.height-HEADER_HEIGHT_SCROLL-65.) event:_event];
+    [viewDetail setAutoresizingMask:AR_WIDTH_HEIGHT | UIViewAutoresizingFlexibleLeftMargin];
     [viewDetail setProtocol:self];
     [self addSubview:viewDetail];
 }
@@ -154,6 +162,7 @@
 - (void)showEditViewWithEvent:(FFEvent *)_event {
     
     viewEditar = [[FFEditEventView alloc] initWithFrame:CGRectMake(self.frame.size.width/2., HEADER_HEIGHT_SCROLL, self.frame.size.width/2., self.frame.size.height-HEADER_HEIGHT_SCROLL-65.) event:_event];
+    [viewEditar setAutoresizingMask:AR_WIDTH_HEIGHT | UIViewAutoresizingFlexibleLeftMargin];
     [viewEditar setProtocol:self];
     [self addSubview:viewEditar];
     

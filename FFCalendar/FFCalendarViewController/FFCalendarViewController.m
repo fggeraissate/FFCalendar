@@ -227,6 +227,8 @@
     
     [viewCalendarYear invalidateLayout];
     [viewCalendarMonth invalidateLayout];
+    [viewCalendarDay invalidateLayout];
+    
 }
 
 #pragma mark - FFButtonAddEventWithPopover Protocol

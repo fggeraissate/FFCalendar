@@ -53,6 +53,8 @@
     if (self) {
         // Initialization code
         
+        [self setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
+        
         [self setDataSource:self];
         [self setDelegate:self];
         

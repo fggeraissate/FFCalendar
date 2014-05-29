@@ -79,6 +79,7 @@
     CGFloat width = [label widthThatWouldFit];
     
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(label.frame.origin.x+width, HEIGHT_CELL_MIN/2., _width-label.frame.origin.x-width, 1.)];
+    [view setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
     [view setBackgroundColor:[UIColor redColor]];
     [label addSubview:view];
 
