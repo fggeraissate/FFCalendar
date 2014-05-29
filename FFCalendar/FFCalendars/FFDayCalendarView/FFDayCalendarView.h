@@ -21,6 +21,5 @@
 @property (nonatomic, strong) NSMutableDictionary *dictEvents;
 
 - (void)invalidateLayout;
-//- (void)enableScrolling:(BOOL)enable;
 
 @end

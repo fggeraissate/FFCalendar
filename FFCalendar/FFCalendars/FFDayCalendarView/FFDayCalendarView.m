@@ -88,13 +88,8 @@
 - (void)invalidateLayout {
     [collectionViewHeaderDay.collectionViewLayout invalidateLayout];
     [dayContainerScroll.collectionViewDay.collectionViewLayout invalidateLayout];
+    [self updateHeader];
 }
-
-//- (void)enableScrolling:(BOOL)enable {
-//    collectionViewHeaderDay.scrollEnabled = enable;
-//    dayContainerScroll.scrollEnabled = enable;
-//    dayContainerScroll.collectionViewDay.scrollEnabled = enable;
-//}
 
 #pragma mark - FFDateManager Notification
 
