@@ -111,6 +111,7 @@
     [buttonEditPopover setTitle:@"Edit" forState:UIControlStateNormal];
     [buttonEditPopover.titleLabel setFont:[UIFont boldSystemFontOfSize:buttonEditPopover.titleLabel.font.pointSize]];
     [buttonEditPopover addTarget:self action:@selector(buttonEditPopoverAction:) forControlEvents:UIControlEventTouchUpInside];
+    [buttonEditPopover setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin];
     
     [self addSubview:buttonEditPopover];
 }
@@ -131,7 +132,6 @@
     CGFloat gap = 30;
     
     labelDate = [[UILabel alloc] initWithFrame:CGRectMake(gap, labelCustomerName.frame.origin.y+labelCustomerName.frame.size.height, 180., labelCustomerName.frame.size.height)];
-    
     [labelDate setText:[NSDate stringDayOfDate:event.dateDay]];
     [labelDate setTextColor:[UIColor grayColor]];
     [labelDate setFont:[UIFont systemFontOfSize:labelCustomerName.font.pointSize-3]];
@@ -145,6 +145,7 @@
     CGFloat x = labelDate.frame.origin.x + labelDate.frame.size.width+gap;
     
     labelHours = [[UILabel alloc] initWithFrame:CGRectMake(x, labelDate.frame.origin.y, sizeView.width-x-gap, labelDate.frame.size.height)];
+    [labelHours setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin];
     [labelHours setText:[NSString stringWithFormat:@"%@ - %@", [NSDate stringTimeOfDate:event.dateTimeBegin], [NSDate stringTimeOfDate:event.dateTimeEnd]]];
     [labelHours setTextAlignment:NSTextAlignmentRight];
     [labelHours setTextColor:[UIColor grayColor]];

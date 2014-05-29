@@ -20,7 +20,7 @@
 @property (nonatomic, strong) FFDayHeaderCollectionView *collectionViewHeaderDay;
 @property (nonatomic, strong) FFDayScrollView *dayContainerScroll;
 @property (nonatomic, strong) FFEventDetailView *viewDetail;
-@property (nonatomic, strong) FFEditEventView *viewEditar;
+@property (nonatomic, strong) FFEditEventView *viewEdit;
 @property (nonatomic) BOOL boolAnimate;
 @end
 
@@ -32,7 +32,7 @@
 @synthesize collectionViewHeaderDay;
 @synthesize dayContainerScroll;
 @synthesize viewDetail;
-@synthesize viewEditar;
+@synthesize viewEdit;
 @synthesize protocol;
 @synthesize boolAnimate;
 
@@ -90,6 +90,12 @@
     [dayContainerScroll.collectionViewDay.collectionViewLayout invalidateLayout];
 }
 
+//- (void)enableScrolling:(BOOL)enable {
+//    collectionViewHeaderDay.scrollEnabled = enable;
+//    dayContainerScroll.scrollEnabled = enable;
+//    dayContainerScroll.collectionViewDay.scrollEnabled = enable;
+//}
+
 #pragma mark - FFDateManager Notification
 
 - (void)dateChanged:(NSNotification *)not {
@@ -123,7 +129,7 @@
     
     CGPoint point = [gestureRecognizer locationInView:self];
     
-    return !(viewEditar.superview != nil && CGRectContainsPoint(viewEditar.frame, point));
+    return !(viewEdit.superview != nil && CGRectContainsPoint(viewEdit.frame, point));
 }
 
 #pragma mark - FFDayCollectionView Protocol
@@ -146,12 +152,12 @@
 
 - (void)showViewDetailsWithEvent:(FFEvent *)_event cell:(UICollectionViewCell *)cell {
     
-    [viewEditar removeFromSuperview];
-    viewEditar = nil;
+    [viewEdit removeFromSuperview];
+    viewEdit = nil;
     [viewDetail removeFromSuperview];
     viewDetail = nil;
     
-   viewDetail = [[FFEventDetailView alloc] initWithFrame:CGRectMake(self.frame.size.width/2., HEADER_HEIGHT_SCROLL, self.frame.size.width/2., self.frame.size.height-HEADER_HEIGHT_SCROLL-65.) event:_event];
+   viewDetail = [[FFEventDetailView alloc] initWithFrame:CGRectMake(self.frame.size.width/2., HEADER_HEIGHT_SCROLL, self.frame.size.width/2., self.frame.size.height-HEADER_HEIGHT_SCROLL) event:_event];
     [viewDetail setAutoresizingMask:AR_WIDTH_HEIGHT | UIViewAutoresizingFlexibleLeftMargin];
     [viewDetail setProtocol:self];
     [self addSubview:viewDetail];
@@ -161,10 +167,10 @@
 
 - (void)showEditViewWithEvent:(FFEvent *)_event {
     
-    viewEditar = [[FFEditEventView alloc] initWithFrame:CGRectMake(self.frame.size.width/2., HEADER_HEIGHT_SCROLL, self.frame.size.width/2., self.frame.size.height-HEADER_HEIGHT_SCROLL-65.) event:_event];
-    [viewEditar setAutoresizingMask:AR_WIDTH_HEIGHT | UIViewAutoresizingFlexibleLeftMargin];
-    [viewEditar setProtocol:self];
-    [self addSubview:viewEditar];
+    viewEdit = [[FFEditEventView alloc] initWithFrame:CGRectMake(self.frame.size.width/2., HEADER_HEIGHT_SCROLL, self.frame.size.width/2., self.frame.size.height-HEADER_HEIGHT_SCROLL) event:_event];
+    [viewEdit setAutoresizingMask:AR_WIDTH_HEIGHT | UIViewAutoresizingFlexibleLeftMargin];
+    [viewEdit setProtocol:self];
+    [self addSubview:viewEdit];
     
     [viewDetail removeFromSuperview];
     viewDetail = nil;
