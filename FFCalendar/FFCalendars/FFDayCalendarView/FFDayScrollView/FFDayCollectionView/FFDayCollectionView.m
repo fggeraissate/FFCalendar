@@ -55,7 +55,7 @@
         boolGoNext = NO;
         boolGoPrevious = NO;
         
-        [self setAutoresizingMask:AR_WIDTH_HEIGHT];
+        [self setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
     }
     return self;
 }

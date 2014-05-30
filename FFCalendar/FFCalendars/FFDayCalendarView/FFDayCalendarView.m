@@ -88,7 +88,7 @@
 - (void)invalidateLayout {
     [collectionViewHeaderDay.collectionViewLayout invalidateLayout];
     [dayContainerScroll.collectionViewDay.collectionViewLayout invalidateLayout];
-    [self updateHeader];
+    [self dateChanged:nil];
 }
 
 #pragma mark - FFDateManager Notification
@@ -152,7 +152,7 @@
     [viewDetail removeFromSuperview];
     viewDetail = nil;
     
-   viewDetail = [[FFEventDetailView alloc] initWithFrame:CGRectMake(self.frame.size.width/2., HEADER_HEIGHT_SCROLL, self.frame.size.width/2., self.frame.size.height-HEADER_HEIGHT_SCROLL) event:_event];
+    viewDetail = [[FFEventDetailView alloc] initWithFrame:CGRectMake(self.frame.size.width/2., HEADER_HEIGHT_SCROLL, self.frame.size.width/2., self.frame.size.height-HEADER_HEIGHT_SCROLL) event:_event];
     [viewDetail setAutoresizingMask:AR_WIDTH_HEIGHT | UIViewAutoresizingFlexibleLeftMargin];
     [viewDetail setProtocol:self];
     [self addSubview:viewDetail];

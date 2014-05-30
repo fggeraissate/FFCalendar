@@ -53,14 +53,14 @@
         
         FFViewWithHourLines *viewWithHourLines = [[FFViewWithHourLines alloc] initWithFrame:CGRectZero];
         
-        collectionViewDay = [[FFDayCollectionView alloc] initWithFrame:CGRectMake(10.,0.,self.frame.size.width-10,viewWithHourLines.totalHeight)collectionViewLayout:[UICollectionViewFlowLayout new]];
+        collectionViewDay = [[FFDayCollectionView alloc] initWithFrame:CGRectMake(10.,0.,self.frame.size.width-10,viewWithHourLines.totalHeight+HEIGHT_CELL_HOUR)collectionViewLayout:[UICollectionViewFlowLayout new]];
         [collectionViewDay scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:[NSDate componentsOfDate:[[FFDateManager sharedManager] currentDate]].day-1+7 inSection:0] atScrollPosition:UICollectionViewScrollPositionLeft animated:NO];
         [self addSubview:collectionViewDay];
         
         labelWithActualHour = [viewWithHourLines labelWithCurrentHourWithWidth:self.frame.size.width];
         [labelWithActualHour setFrame:CGRectMake(labelWithActualHour.frame.origin.x, labelWithActualHour.frame.origin.y+viewWithHourLines.frame.origin.y, labelWithActualHour.frame.size.width, labelWithActualHour.frame.size.height)];
         
-        [self setContentSize:CGSizeMake(self.frame.size.width, collectionViewDay.frame.origin.y+collectionViewDay.frame.size.height)];
+        [self setContentSize:CGSizeMake(self.frame.size.width, collectionViewDay.frame.origin.y+collectionViewDay.frame.size.height-HEIGHT_CELL_HOUR)];
         [self scrollRectToVisible:CGRectMake(0, labelWithActualHour.frame.origin.y, self.frame.size.width, self.frame.size.height) animated:NO];
     }
     
