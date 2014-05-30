@@ -77,6 +77,12 @@
     [scrollViewHeaderWeek scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:intIndex inSection:0] atScrollPosition:UICollectionViewScrollPositionRight animated:NO];
 }
 
+#pragma mark - Invalidate Layout
+
+- (void)invalidateLayout {
+    
+}
+
 #pragma mark - FFDateManager Notification
 
 - (void)dateChanged:(NSNotification *)not {
