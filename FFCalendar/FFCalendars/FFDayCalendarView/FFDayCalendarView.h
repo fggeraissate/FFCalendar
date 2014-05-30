@@ -20,4 +20,6 @@
 @property (nonatomic, strong) id<FFDayCalendarViewProtocol> protocol;
 @property (nonatomic, strong) NSMutableDictionary *dictEvents;
 
+- (void)invalidateLayout;
+
 @end

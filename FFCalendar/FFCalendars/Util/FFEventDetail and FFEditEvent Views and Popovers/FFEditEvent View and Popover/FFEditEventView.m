@@ -170,10 +170,12 @@
 - (void)addButtonCancel {
     
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, BUTTON_HEIGHT+30)];
+    [view setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
     [view setBackgroundColor:[UIColor lighterGrayCustom]];
     [self addSubview:view];
     
     buttonCancel = [UIButton buttonWithType:UIButtonTypeCustom];
+    [buttonCancel setAutoresizingMask:UIViewAutoresizingFlexibleRightMargin];
     [self customLayoutOfButton:buttonCancel withTitle:@"Cancel" action:@selector(buttonCancelAction:) frame:CGRectMake(20, 0, 80, BUTTON_HEIGHT+30)];
     [view addSubview:buttonCancel];
 }
@@ -181,6 +183,7 @@
 - (void)addButtonDone {
     
     buttonDone = [UIButton buttonWithType:UIButtonTypeCustom];
+    [buttonDone setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin];
     [self customLayoutOfButton:buttonDone withTitle:@"Done" action:@selector(buttonDoneAction:) frame:CGRectMake(buttonCancel.superview.frame.size.width-80-10, buttonCancel.frame.origin.y, 80, buttonCancel.frame.size.height)];
     [buttonCancel.superview addSubview:buttonDone];
 }
@@ -188,6 +191,7 @@
 - (void)addSearchBar {
     
     searchBarCustom = [[FFSearchBarWithAutoComplete alloc] initWithFrame:CGRectMake(0,buttonCancel.superview.frame.origin.y+buttonCancel.superview.frame.size.height+ BUTTON_HEIGHT, self.frame.size.width, BUTTON_HEIGHT)];
+    [searchBarCustom setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
     [searchBarCustom setStringClientName:event.stringCustomerName];
     [searchBarCustom setNumCustomerID:event.numCustomerID];
     [self addSubview:searchBarCustom];
@@ -196,27 +200,35 @@
 - (void)addButtonDate {
     
     buttonDate = [[FFButtonWithDatePopover alloc] initWithFrame:CGRectMake(0, searchBarCustom.frame.origin.y+searchBarCustom.frame.size.height+2, self.frame.size.width, BUTTON_HEIGHT) date:event.dateDay];
+    [buttonDate setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
     [self addSubview:buttonDate];
 }
 
 - (void)addButtonTimeBegin {
     
     buttonTimeBegin = [[FFButtonWithHourPopover alloc] initWithFrame:CGRectMake(0, buttonDate.frame.origin.y+buttonDate.frame.size.height+BUTTON_HEIGHT, self.frame.size.width, BUTTON_HEIGHT) date:event.dateTimeBegin];
+    [buttonTimeBegin setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
     [self addSubview:buttonTimeBegin];
 }
 
 - (void)addButtonTimeEnd {
     
     buttonTimeEnd = [[FFButtonWithHourPopover alloc] initWithFrame:CGRectMake(0, buttonTimeBegin.frame.origin.y+buttonTimeBegin.frame.size.height+2, self.frame.size.width, BUTTON_HEIGHT) date:event.dateTimeEnd];
+    [buttonTimeEnd setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
     [self addSubview:buttonTimeEnd];
 }
 
 - (void)addButtonDelete {
     
     buttonDelete = [UIButton buttonWithType:UIButtonTypeCustom];
+    [buttonDelete setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin];
     [self customLayoutOfButton:buttonDelete withTitle:@"Delete Event" action:@selector(buttonDeleteAction:) frame:CGRectMake(0, self.frame.size.height-2*BUTTON_HEIGHT, self.frame.size.width, 2*BUTTON_HEIGHT)];
     [buttonDelete setBackgroundColor:[UIColor whiteColor]];
     [self addSubview:buttonDelete];
+    
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, buttonDelete.frame.origin.y-BUTTON_HEIGHT, self.frame.size.width, BUTTON_HEIGHT)];
+    [view setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin];
+    [self addSubview:view];
 }
 
 - (void)addtableViewGuests {
@@ -224,6 +236,7 @@
     CGFloat y = buttonTimeEnd.frame.origin.y+buttonTimeEnd.frame.size.height+BUTTON_HEIGHT;
     
     tableViewGuests = [[FFGuestsTableView alloc] initWithFrame:CGRectMake(0, y, self.frame.size.width,buttonDelete.frame.origin.y-y-BUTTON_HEIGHT)];
+    [tableViewGuests setAutoresizingMask:AR_WIDTH_HEIGHT];
     [tableViewGuests setArrayWithSelectedItens:event.arrayWithGuests];
     [self addSubview:tableViewGuests];
 }

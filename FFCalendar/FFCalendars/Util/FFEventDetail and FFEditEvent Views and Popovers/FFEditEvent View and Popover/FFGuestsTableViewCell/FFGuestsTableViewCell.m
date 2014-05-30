@@ -42,16 +42,20 @@
     [self setAccessoryType:UITableViewCellAccessoryNone];
     
     if (!labelNome) {
+        [self setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
+        
         CGFloat width = self.frame.size.width;
         CGFloat height = self.frame.size.height/5.;
         
         labelNome = [[UILabel alloc] initWithFrame:CGRectMake(0., 5., width, 2.5*height-5)];
+        [labelNome setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
         //        [labelNome setBackgroundColor:[UIColor redColor]];
         [labelNome setTextAlignment:NSTextAlignmentCenter];
         [labelNome setFont:[UIFont systemFontOfSize:16.]];
         [self addSubview:labelNome];
         
         labelEmail = [[UILabel alloc] initWithFrame:CGRectMake(0., 5+labelNome.frame.size.height, width, 2*height)];
+        [labelEmail setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
         //        [labelEmail setBackgroundColor:[UIColor blueColor]];
         [labelEmail setTextAlignment:NSTextAlignmentCenter];
         [labelEmail setFont:[UIFont systemFontOfSize:13.]];

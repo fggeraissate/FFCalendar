@@ -36,6 +36,8 @@ static UIImage *imageCircleBlack;
             imageCircleBlack = [UIImage imageNamed:@"blackCircle"];
             imageCircleRed = [UIImage imageNamed:@"redCircle"];
         }
+        
+        [self setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
     }
     return self;
 }

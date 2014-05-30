@@ -23,13 +23,15 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        
+        [self setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
     }
     return self;
 }
 
 - (id)initWithFrame:(CGRect)frame date:(NSDate *)date {
     
-    self = [super initWithFrame:frame];
+    self = [self initWithFrame:frame];
     
     if (self) {
         dateHourAndMin = date;
