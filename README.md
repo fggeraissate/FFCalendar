@@ -1,10 +1,10 @@
 FFCalendar (beta)
 ==========
-Yearly, Monthly, Weekly and Daily Calendars for iOS.
+A study of iOS Yearly, Monthly, Weekly and Daily Calendars.
 
 Limitations: 
 - For iPad only
-- Weekly and Daily Calendars supports portrait mode only
+- Weekly Calendar supports portrait mode only
 - Works on iOS 7 and above
 
 <img src="https://raw.githubusercontent.com/fggeraissate/FFCalendar/master/FFCalendar/FFCalendars/Util/Images/YearlyCalendar.png" alt="Yearly Calendar for iOS" width="300" height="401"/>
@@ -57,5 +57,5 @@ On the other hand, if you enjoyed the `FFCalendarViewController`'s view as it is
 `FFCalendar` is available under the [MIT license](https://github.com/fggeraissate/FFCalendar/blob/master/LICENSE).
 
 ## Contact
-Contact me at: http://fernandasportfolio.tumblr.com/Contato
+Contact me at: http://fernandasportfolio.tumblr.com/contato
 
