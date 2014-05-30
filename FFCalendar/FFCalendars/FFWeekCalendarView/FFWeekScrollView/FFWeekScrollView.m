@@ -33,6 +33,8 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        
+        [self setAutoresizingMask:AR_WIDTH_HEIGHT];
     }
     return self;
 }
@@ -46,7 +48,7 @@
         viewWithHourLines = [[FFViewWithHourLines alloc] initWithFrame:CGRectMake(0, 0, 80., self.frame.size.height)];
         [self addSubview:viewWithHourLines];
         
-        collectionViewWeek = [[FFWeekCollectionView alloc] initWithFrame:CGRectMake(viewWithHourLines.frame.size.width,viewWithHourLines.frame.origin.y,self.frame.size.width-viewWithHourLines.frame.size.width,viewWithHourLines.totalHeight)collectionViewLayout:[UICollectionViewFlowLayout new]];
+        collectionViewWeek = [[FFWeekCollectionView alloc] initWithFrame:CGRectMake(viewWithHourLines.frame.size.width,viewWithHourLines.frame.origin.y,self.frame.size.width-viewWithHourLines.frame.size.width,viewWithHourLines.totalHeight+HEIGHT_CELL_HOUR)collectionViewLayout:[UICollectionViewFlowLayout new]];
         [self scrollToPage:[NSDate componentsOfDate:[[FFDateManager sharedManager] currentDate]].weekOfMonth+1];
         [self addSubview:collectionViewWeek];
         
@@ -56,7 +58,7 @@
         labelGrayWithActualHour = viewWithHourLines.labelWithSameYOfCurrentHour;
         [labelGrayWithActualHour setAlpha:0.];
         
-        [self setContentSize:CGSizeMake(self.frame.size.width, collectionViewWeek.frame.origin.y+collectionViewWeek.frame.size.height+((MINUTES_INTERVAL-1)*HEIGHT_CELL_MIN))];
+        [self setContentSize:CGSizeMake(self.frame.size.width, collectionViewWeek.frame.origin.y+collectionViewWeek.frame.size.height-HEIGHT_CELL_HOUR)];
         [self scrollRectToVisible:CGRectMake(0., labelWithActualHour.frame.origin.y, self.frame.size.width, self.frame.size.height) animated:YES];
     }
     

@@ -81,6 +81,9 @@
 
 - (void)invalidateLayout {
     
+    [scrollViewHeaderWeek.collectionViewLayout invalidateLayout];
+    [weekContainerScroll.collectionViewWeek.collectionViewLayout invalidateLayout];
+    [self dateChanged:nil];
 }
 
 #pragma mark - FFDateManager Notification
