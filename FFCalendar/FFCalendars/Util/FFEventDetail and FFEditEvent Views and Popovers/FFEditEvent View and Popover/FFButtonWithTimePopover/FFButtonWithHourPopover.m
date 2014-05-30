@@ -12,6 +12,8 @@
 
 #import "FFHourPopoverController.h"
 
+#import "FFImportantFilesForCalendar.h"
+
 @interface FFButtonWithHourPopover () <FFHourPopoverControllerProtocol>
 @property (nonatomic, strong) FFHourPopoverController *popoverControllerDate;
 @end

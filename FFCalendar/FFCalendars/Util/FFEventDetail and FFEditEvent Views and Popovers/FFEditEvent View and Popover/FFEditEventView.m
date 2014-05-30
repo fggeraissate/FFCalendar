@@ -17,6 +17,8 @@
 
 #import "SVProgressHUD.h"
 
+#import "FFImportantFilesForCalendar.h"
+
 @interface FFEditEventView () <UIGestureRecognizerDelegate>
 @property (nonatomic, strong) FFEvent *event;
 @property (nonatomic, strong) UIButton *buttonCancel;
@@ -104,10 +106,6 @@
 }
 
 - (IBAction)buttonDoneAction:(id)sender {
-    
-    // SVProgressHUD
-    [[SVProgressHUD sharedView] setTintColor:[UIColor blackColor]];
-    [[SVProgressHUD sharedView] setBackgroundColor:[UIColor lighterGrayCustom]];
     
     FFEvent *eventNew = [FFEvent new];
     eventNew.stringCustomerName = searchBarCustom.stringClientName;

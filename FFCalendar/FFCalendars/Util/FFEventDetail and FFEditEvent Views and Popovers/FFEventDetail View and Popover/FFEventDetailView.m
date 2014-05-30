@@ -10,6 +10,9 @@
 
 #import "FFEventDetailView.h"
 
+#import "FFImportantFilesForCalendar.h"
+
+
 @interface FFEventDetailView ()
 @property (nonatomic, strong) FFEvent *event;
 @property (nonatomic, strong) UILabel *labelCustomerName;

@@ -11,6 +11,7 @@
 #import "FFWeekScrollView.h"
 
 #import "FFViewWithHourLines.h"
+#import "FFImportantFilesForCalendar.h"
 
 @interface FFWeekScrollView () <UIScrollViewDelegate>
 @property (nonatomic, strong) FFViewWithHourLines *viewWithHourLines;

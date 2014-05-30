@@ -12,6 +12,7 @@
 
 #import "FFYearCollectionViewFlowLayout.h"
 #import "FFYearCell.h"
+#import "FFImportantFilesForCalendar.h"
 
 @interface FFYearCollectionView () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 @property (nonatomic) CGFloat lastContentOffset;

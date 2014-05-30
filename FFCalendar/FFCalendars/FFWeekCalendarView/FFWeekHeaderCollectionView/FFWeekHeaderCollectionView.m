@@ -12,6 +12,7 @@
 
 #import "FFWeekHeaderCell.h"
 #import "FFWeekCollectionViewFlowLayout.h"
+#import "FFImportantFilesForCalendar.h"
 
 @interface FFWeekHeaderCollectionView () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 @property (nonatomic) CGFloat lastContentOffset;

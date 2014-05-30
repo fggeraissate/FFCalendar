@@ -13,6 +13,7 @@
 #import "FFMonthCollectionViewFlowLayout.h"
 #import "FFEvent.h"
 #import "FFMonthCell.h"
+#import "FFImportantFilesForCalendar.h"
 
 @interface FFMonthCollectionView () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, FFMonthCellProtocol>
 @property (nonatomic) CGFloat lastContentOffset;

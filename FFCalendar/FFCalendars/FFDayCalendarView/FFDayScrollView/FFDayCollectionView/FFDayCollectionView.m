@@ -11,6 +11,7 @@
 #import "FFDayCollectionView.h"
 
 #import "FFDayCollectionViewFlowLayout.h"
+#import "FFImportantFilesForCalendar.h"
 
 @interface FFDayCollectionView () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 @property (nonatomic) CGFloat lastContentOffset;
