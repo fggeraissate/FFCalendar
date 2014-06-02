@@ -4,7 +4,6 @@ A study of iOS Yearly, Monthly, Weekly and Daily Calendars.
 
 Limitations: 
 - For iPad only
-- Weekly Calendar supports portrait mode only
 - Works on iOS 7 and above
 
 <img src="https://raw.githubusercontent.com/fggeraissate/FFCalendar/master/FFCalendar/FFCalendars/Util/Images/YearlyCalendar.png" alt="Yearly Calendar for iOS" width="300" height="401"/>
