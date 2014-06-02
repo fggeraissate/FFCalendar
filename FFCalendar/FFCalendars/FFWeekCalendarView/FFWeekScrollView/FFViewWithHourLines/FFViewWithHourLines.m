@@ -34,6 +34,8 @@
     if (self) {
         // Initialization code
         
+        [self setAutoresizingMask:AR_WIDTH_HEIGHT];
+        
         CGFloat y = 0;
         
         NSDateComponents *compNow = [NSDate componentsOfCurrentDate];

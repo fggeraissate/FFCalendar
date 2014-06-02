@@ -227,6 +227,7 @@
     
     [viewCalendarYear invalidateLayout];
     [viewCalendarMonth invalidateLayout];
+    [viewCalendarWeek invalidateLayout];
     [viewCalendarDay invalidateLayout];
 }
 

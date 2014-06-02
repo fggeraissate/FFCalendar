@@ -23,10 +23,12 @@
         // Initialization code
         
         imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0., 0., self.frame.size.width, self.frame.size.height)];
+        [imageView setAutoresizingMask:AR_LEFT_RIGHT];
         [imageView setContentMode:UIViewContentModeCenter];
         [self addSubview:imageView];
         
         label = [[UILabel alloc] initWithFrame:CGRectMake(0., 0., self.frame.size.width, self.frame.size.height)];
+        [label setAutoresizingMask:AR_LEFT_RIGHT];
         [label setTextAlignment:NSTextAlignmentCenter];
         [self addSubview:label];
     }

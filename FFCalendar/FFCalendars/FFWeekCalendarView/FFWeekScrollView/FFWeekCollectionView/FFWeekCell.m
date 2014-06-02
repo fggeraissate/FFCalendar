@@ -68,6 +68,8 @@
                 UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, HEIGHT_CELL_MIN/2., self.frame.size.width, 1.)];
                 [view setBackgroundColor:[UIColor lightGrayCustom]];
                 [labelHourMin addSubview:view];
+                [view setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
+                [labelHourMin setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
             }
             [self addSubview:labelHourMin];
             [arrayLabelsHourAndMin addObject:labelHourMin];

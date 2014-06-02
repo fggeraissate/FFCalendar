@@ -46,7 +46,7 @@
         [self setDataSource:self];
         [self setDelegate:self];
         
-        [self setBackgroundColor:[UIColor lightGrayCustom]];
+        [self setBackgroundColor:[UIColor lighterGrayCustom]];
         
         [self registerClass:[FFWeekCell class] forCellWithReuseIdentifier:REUSE_IDENTIFIER_MONTH_CELL];
         
@@ -55,6 +55,8 @@
         
         boolGoPrevious = NO;
         boolGoNext = NO;
+        
+        [self setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
     }
     return self;
 }
@@ -104,15 +106,15 @@
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    return CGSizeMake((self.frame.size.width-7*1)/7, self.frame.size.height);
+    return CGSizeMake((self.frame.size.width-7*SPACE_COLLECTIONVIEW_CELL)/7, self.frame.size.height);
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
-    return 1;
+    return SPACE_COLLECTIONVIEW_CELL;
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
-    return 1;
+    return SPACE_COLLECTIONVIEW_CELL;
 }
 
 #pragma mark - UIScrollView Delegate
