@@ -1,4 +1,4 @@
-FFCalendar (beta)
+FFCalendar
 ==========
 A study of iOS Yearly, Monthly, Weekly and Daily Calendars.
 
