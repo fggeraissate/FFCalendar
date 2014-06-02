@@ -12,6 +12,8 @@
 
 #import "FFEditEventView.h"
 
+#import "FFImportantFilesForCalendar.h"
+
 @interface FFEditEventPopoverController () <FFEditEventViewProtocol>
 @property (nonatomic, strong) UIViewController *popoverContent;
 @property (nonatomic, strong) FFEvent *event;

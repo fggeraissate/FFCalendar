@@ -15,6 +15,7 @@
 #import "FFButtonWithDatePopover.h"
 #import "FFButtonWithHourPopover.h"
 #import "SVProgressHUD.h"
+#import "FFImportantFilesForCalendar.h"
 
 @interface FFAddEventPopoverController () <UIGestureRecognizerDelegate>
 @property (nonatomic, strong) UIViewController *popoverContent;
@@ -74,11 +75,7 @@
 }
 
 - (IBAction)buttonDoneAction:(id)sender {
-    
-    // SVProgressHUD
-    [[SVProgressHUD sharedView] setTintColor:[UIColor blackColor]];
-    [[SVProgressHUD sharedView] setBackgroundColor:[UIColor lighterGrayCustom]];
-    
+
     FFEvent *eventNew = [FFEvent new];
     eventNew.stringCustomerName = searchBarCustom.stringClientName;
     eventNew.numCustomerID = searchBarCustom.numCustomerID;

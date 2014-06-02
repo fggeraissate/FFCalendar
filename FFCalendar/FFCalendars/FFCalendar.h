@@ -10,6 +10,9 @@
 
 #import <Foundation/Foundation.h>
 
+#import "FFConstants.h"
+#import "FFImportantFilesForCalendar.h"
+
 #import "FFYearCalendarView.h"
 #import "FFMonthCalendarView.h"
 #import "FFWeekCalendarView.h"
@@ -20,6 +23,7 @@
 #import "FFRedAndWhiteButton.h"
 #import "FFButtonAddEventWithPopover.h"
 #import "FFEditEventPopoverController.h"
+
 
 @interface FFCalendar : NSObject
 

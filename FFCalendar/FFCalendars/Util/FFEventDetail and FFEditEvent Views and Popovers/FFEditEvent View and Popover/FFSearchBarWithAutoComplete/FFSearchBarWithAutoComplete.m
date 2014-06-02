@@ -10,6 +10,8 @@
 
 #import "FFSearchBarWithAutoComplete.h"
 
+#import "FFImportantFilesForCalendar.h"
+
 @interface FFSearchBarWithAutoComplete () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 @property (nonatomic, strong) NSMutableArray *arrayWithAllClients;
 @end

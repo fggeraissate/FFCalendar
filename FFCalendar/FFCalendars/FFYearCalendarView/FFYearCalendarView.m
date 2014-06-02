@@ -12,6 +12,7 @@
 
 #import "FFYearCollectionView.h"
 #import "FFYearCollectionViewFlowLayout.h"
+#import "FFImportantFilesForCalendar.h"
 
 @interface FFYearCalendarView () <FFYearCollectionViewProtocol>
 @property (nonatomic, strong) FFYearCollectionView *collectionViewYear;

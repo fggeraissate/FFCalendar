@@ -10,6 +10,7 @@
 
 #import "FFMonthCell.h"
 #import "FFButtonWithEditAndDetailPopoversForMonthCell.h"
+#import "FFImportantFilesForCalendar.h"
 
 @interface FFMonthCell () <FFButtonWithEditAndDetailPopoversForMonthCellProtocol>
 @property (nonatomic, strong) NSMutableArray *arrayButtons;

@@ -5,6 +5,7 @@ A study of iOS Yearly, Monthly, Weekly and Daily Calendars.
 Limitations: 
 - For iPad only
 - Works on iOS 7 and above
+- SVProgressHUD is required to compile. Cocoapods will satisfy this dependency for you, or you can include it yourself in your main progress
 
 <img src="https://raw.githubusercontent.com/fggeraissate/FFCalendar/master/FFCalendar/FFCalendars/Util/Images/YearlyCalendar.png" alt="Yearly Calendar for iOS" width="300" height="401"/>
 <img src="https://raw.githubusercontent.com/fggeraissate/FFCalendar/master/FFCalendar/FFCalendars/Util/Images/MonthlyCalendar.png" alt="Monthly Calendar for iOS" width="300" height="401"/>
@@ -54,6 +55,9 @@ On the other hand, if you enjoyed the `FFCalendarViewController`'s view as it is
 
 ## License
 `FFCalendar` is available under the [MIT license](https://github.com/fggeraissate/FFCalendar/blob/master/LICENSE).
+
+## Cocoapods
+Cocoapod support is now experimentally available. You can add the framework to your Podfile using the `:podspec` directive as documented in the Podfile documentation.
 
 ## Contact
 Contact me at: http://fernandasportfolio.tumblr.com/contato

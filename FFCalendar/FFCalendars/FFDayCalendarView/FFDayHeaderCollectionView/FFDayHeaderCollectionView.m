@@ -12,6 +12,7 @@
 
 #import "FFDayHeaderCell.h"
 #import "FFWeekCollectionViewFlowLayout.h"
+#import "FFImportantFilesForCalendar.h"
 
 #define QNT_BY_PAGING 7
 
