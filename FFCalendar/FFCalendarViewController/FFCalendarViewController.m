@@ -14,6 +14,7 @@
 
 @interface FFCalendarViewController () <FFButtonAddEventWithPopoverProtocol, FFYearCalendarViewProtocol, FFMonthCalendarViewProtocol, FFWeekCalendarViewProtocol, FFDayCalendarViewProtocol>
 @property (nonatomic) BOOL boolDidLoad;
+@property (nonatomic) BOOL boolYearViewIsShowing;
 @property (nonatomic, strong) NSMutableDictionary *dictEvents;
 @property (nonatomic, strong) UILabel *labelWithMonthAndYear;
 @property (nonatomic, strong) NSArray *arrayButtons;
@@ -30,6 +31,7 @@
 #pragma mark - Synthesize
 
 @synthesize boolDidLoad;
+@synthesize boolYearViewIsShowing;
 @synthesize protocol;
 @synthesize arrayWithEvents;
 @synthesize dictEvents;
@@ -58,7 +60,7 @@
     [super viewDidLoad];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dateChanged:) name:DATE_MANAGER_DATE_CHANGED object:nil];
-
+    
     [self customNavigationBarLayout];
     
     [self addCalendars];
@@ -86,11 +88,15 @@
 
 - (void)dateChanged:(NSNotification *)notification {
     
-    NSDateComponents *comp = [NSDate componentsOfDate:[[FFDateManager sharedManager] currentDate]];
-    
-    [labelWithMonthAndYear setText:[NSString stringWithFormat:@"%@ %i", [arrayMonthName objectAtIndex:comp.month-1], comp.year]];
+    [self updateLabelWithMonthAndYear];
 }
 
+- (void)updateLabelWithMonthAndYear {
+    
+    NSDateComponents *comp = [NSDate componentsOfDate:[[FFDateManager sharedManager] currentDate]];
+    NSString *string = boolYearViewIsShowing ? [NSString stringWithFormat:@"%i", comp.year] : [NSString stringWithFormat:@"%@ %i", [arrayMonthName objectAtIndex:comp.month-1], comp.year];
+    [labelWithMonthAndYear setText:string];
+}
 
 #pragma mark - Init dictEvents
 
@@ -207,18 +213,23 @@
 
 - (IBAction)buttonYearMonthWeekDayAction:(id)sender {
     
-    [self.view bringSubviewToFront:[arrayCalendars objectAtIndex:[arrayButtons indexOfObject:sender]]];
+    int index = [arrayButtons indexOfObject:sender];
+    
+    [self.view bringSubviewToFront:[arrayCalendars objectAtIndex:index]];
     
     for (UIButton *button in arrayButtons) {
         button.selected = (button == sender);
     }
+    
+    boolYearViewIsShowing = (index == 0);
+    [self updateLabelWithMonthAndYear];
 }
 
 - (IBAction)buttonTodayAction:(id)sender {
     
     [[FFDateManager sharedManager] setCurrentDate:[NSDate dateWithYear:[NSDate componentsOfCurrentDate].year
-                                                               month:[NSDate componentsOfCurrentDate].month
-                                                                 day:[NSDate componentsOfCurrentDate].day]];
+                                                                 month:[NSDate componentsOfCurrentDate].month
+                                                                   day:[NSDate componentsOfCurrentDate].day]];
 }
 
 #pragma mark - Interface Rotation
