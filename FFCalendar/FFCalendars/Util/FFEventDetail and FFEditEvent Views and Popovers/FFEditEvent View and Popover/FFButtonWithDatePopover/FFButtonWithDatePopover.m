@@ -11,6 +11,7 @@
 #import "FFButtonWithDatePopover.h"
 
 #import "FFDatePopoverController.h"
+#import "FFImportantFilesForCalendar.h"
 
 @interface FFButtonWithDatePopover () <FFDatePopoverControllerProtocol>
 @property (nonatomic, strong) FFDatePopoverController *popoverControllerDate;

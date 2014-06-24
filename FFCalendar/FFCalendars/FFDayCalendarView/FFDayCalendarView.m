@@ -16,6 +16,8 @@
 #import "FFEventDetailView.h"
 #import "FFEditEventView.h"
 
+#import "FFImportantFilesForCalendar.h"
+
 @interface FFDayCalendarView () <FFDayCellProtocol, FFEditEventViewProtocol, FFEventDetailViewProtocol, FFDayHeaderCollectionViewProtocol, FFDayCollectionViewProtocol, UIGestureRecognizerDelegate>
 @property (nonatomic, strong) FFDayHeaderCollectionView *collectionViewHeaderDay;
 @property (nonatomic, strong) FFDayScrollView *dayContainerScroll;

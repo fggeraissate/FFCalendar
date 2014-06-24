@@ -14,6 +14,7 @@
 #import "FFBlueButton.h"
 #import "FFEventDetailPopoverController.h"
 #import "FFEditEventPopoverController.h"
+#import "FFImportantFilesForCalendar.h"
 
 @interface FFWeekCell () <FFEventDetailPopoverControllerProtocol, FFEditEventPopoverControllerProtocol>
 @property (nonatomic, strong) NSMutableArray *arrayLabelsHourAndMin;

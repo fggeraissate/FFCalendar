@@ -9,6 +9,7 @@
 //
 
 #import "FFWeekHeaderCell.h"
+#import "FFImportantFilesForCalendar.h"
 
 @implementation FFWeekHeaderCell
 

@@ -11,6 +11,7 @@
 #import "FFGuestsTableView.h"
 
 #import "FFGuestsTableViewCell.h"
+#import "FFImportantFilesForCalendar.h"
 
 @interface FFGuestsTableView () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) NSArray *arrayWithAllContacts;

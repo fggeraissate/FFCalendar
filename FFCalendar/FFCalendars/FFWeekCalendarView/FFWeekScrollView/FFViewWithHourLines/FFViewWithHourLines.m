@@ -11,6 +11,7 @@
 #import "FFViewWithHourLines.h"
 
 #import "FFHourAndMinLabel.h"
+#import "FFImportantFilesForCalendar.h"
 
 @interface FFViewWithHourLines ()
 @property (nonatomic, strong) NSMutableArray *arrayLabelsHourAndMin;

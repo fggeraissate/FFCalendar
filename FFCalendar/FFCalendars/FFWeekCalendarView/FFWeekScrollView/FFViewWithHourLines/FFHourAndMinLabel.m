@@ -10,6 +10,8 @@
 
 #import "FFHourAndMinLabel.h"
 
+#import "FFImportantFilesForCalendar.h"
+
 @implementation FFHourAndMinLabel
 
 #pragma mark - Synthesize

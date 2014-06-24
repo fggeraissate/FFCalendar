@@ -12,6 +12,7 @@
 
 #import "FFMonthCollectionView.h"
 #import "FFMonthHeaderView.h"
+#import "FFImportantFilesForCalendar.h"
 
 @interface FFMonthCalendarView () <FFMonthCollectionViewProtocol>
 @property (nonatomic, strong) FFMonthCollectionView *collectionViewMonth;

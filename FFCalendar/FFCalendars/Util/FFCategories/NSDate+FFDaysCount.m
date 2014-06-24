@@ -9,13 +9,12 @@
 //
 
 #import "NSDate+FFDaysCount.h"
+#import "FFImportantFilesForCalendar.h"
 
 @implementation NSDate (FFDaysCount)
 
-
-
--(NSDate*)lastDayOfMonth
-{
+-(NSDate*)lastDayOfMonth {
+    
     NSInteger dayCount = [self numberOfDaysInMonthCount];
     
     NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
@@ -32,8 +31,8 @@
     return [calendar dateFromComponents:comp];
 }
 
--(NSInteger)numberOfDaysInMonthCount
-{
+-(NSInteger)numberOfDaysInMonthCount {
+    
     NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     
 //    [calendar setTimeZone:[NSTimeZone timeZoneWithName:TIMEZONE]];
@@ -60,6 +59,7 @@
 }
 
 #pragma mark - Methods Statics
+
 + (NSDateComponents *)componentsOfCurrentDate {
     
     return [NSDate componentsOfDate:[NSDate date]];

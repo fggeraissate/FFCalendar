@@ -12,6 +12,7 @@
 
 #import "FFWeekHeaderCollectionView.h"
 #import "FFWeekScrollView.h"
+#import "FFImportantFilesForCalendar.h"
 
 @interface FFWeekCalendarView () <FFWeekCollectionViewProtocol, FFWeekHeaderCollectionViewProtocol>
 @property (nonatomic, strong) FFWeekHeaderCollectionView *scrollViewHeaderWeek;
