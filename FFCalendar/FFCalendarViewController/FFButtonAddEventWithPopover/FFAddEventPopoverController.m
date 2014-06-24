@@ -14,7 +14,7 @@
 #import "FFSearchBarWithAutoComplete.h"
 #import "FFButtonWithDatePopover.h"
 #import "FFButtonWithHourPopover.h"
-#import "SVProgressHUD.h"
+//#import "SVProgressHUD.h"
 
 @interface FFAddEventPopoverController () <UIGestureRecognizerDelegate>
 @property (nonatomic, strong) UIViewController *popoverContent;
@@ -75,9 +75,8 @@
 
 - (IBAction)buttonDoneAction:(id)sender {
     
-    // SVProgressHUD
-    [[SVProgressHUD sharedView] setTintColor:[UIColor blackColor]];
-    [[SVProgressHUD sharedView] setBackgroundColor:[UIColor lighterGrayCustom]];
+    //    [[SVProgressHUD sharedView] setTintColor:[UIColor blackColor]];
+    //    [[SVProgressHUD sharedView] setBackgroundColor:[UIColor lighterGrayCustom]];
     
     FFEvent *eventNew = [FFEvent new];
     eventNew.stringCustomerName = searchBarCustom.stringClientName;
@@ -98,7 +97,8 @@
     }
     
     if (stringError) {
-        [SVProgressHUD showErrorWithStatus:stringError];
+        [[[UIAlertView alloc] initWithTitle:nil message:stringError delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil] show];
+        //        [SVProgressHUD showErrorWithStatus:stringError];
     } else if (protocol != nil && [protocol respondsToSelector:@selector(addNewEvent:)]) {
         [protocol addNewEvent:eventNew];
         [self buttonCancelAction:nil];

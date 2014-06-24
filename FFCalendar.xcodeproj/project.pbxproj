@@ -79,8 +79,6 @@
 		CDA8F22C18DA43EA0080DE6D /* FFEventDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F1F218DA43EA0080DE6D /* FFEventDetailView.m */; };
 		CDA8F22D18DA43EA0080DE6D /* blackCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = CDA8F1F518DA43EA0080DE6D /* blackCircle.png */; };
 		CDA8F22E18DA43EA0080DE6D /* redCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = CDA8F1F618DA43EA0080DE6D /* redCircle.png */; };
-		CDA8F22F18DA43EA0080DE6D /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CDA8F1F918DA43EA0080DE6D /* SVProgressHUD.bundle */; };
-		CDA8F23018DA43EA0080DE6D /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F1FB18DA43EA0080DE6D /* SVProgressHUD.m */; };
 		CDA8F23618DA45DC0080DE6D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F23518DA45DC0080DE6D /* AppDelegate.m */; };
 /* End PBXBuildFile section */
 
@@ -224,10 +222,6 @@
 		CDA8F1F318DA43EA0080DE6D /* FFImportantFilesForCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFImportantFilesForCalendar.h; sourceTree = "<group>"; };
 		CDA8F1F518DA43EA0080DE6D /* blackCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackCircle.png; sourceTree = "<group>"; };
 		CDA8F1F618DA43EA0080DE6D /* redCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redCircle.png; sourceTree = "<group>"; };
-		CDA8F1F818DA43EA0080DE6D /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
-		CDA8F1F918DA43EA0080DE6D /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
-		CDA8F1FA18DA43EA0080DE6D /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
-		CDA8F1FB18DA43EA0080DE6D /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		CDA8F23418DA45DC0080DE6D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CDA8F23518DA45DC0080DE6D /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -585,7 +579,6 @@
 				CDA8F1D618DA43EA0080DE6D /* FFEventDetail and FFEditEvent Views and Popovers */,
 				CDA8F1C118DA43EA0080DE6D /* FFBlue and FFRed Buttons */,
 				CDA8F1F418DA43EA0080DE6D /* Images */,
-				CDA8F1F718DA43EA0080DE6D /* SVProgressHUD */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -724,17 +717,6 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
-		CDA8F1F718DA43EA0080DE6D /* SVProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				CDA8F1F818DA43EA0080DE6D /* SVProgressHUD-Prefix.pch */,
-				CDA8F1F918DA43EA0080DE6D /* SVProgressHUD.bundle */,
-				CDA8F1FA18DA43EA0080DE6D /* SVProgressHUD.h */,
-				CDA8F1FB18DA43EA0080DE6D /* SVProgressHUD.m */,
-			);
-			path = SVProgressHUD;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -811,7 +793,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDA596E819086CFA00CB4F93 /* WeeklyCalendar.png in Resources */,
-				CDA8F22F18DA43EA0080DE6D /* SVProgressHUD.bundle in Resources */,
 				55AFEC4918AC435D005D2B91 /* InfoPlist.strings in Resources */,
 				CDA596E719086CFA00CB4F93 /* MonthlyCalendar.png in Resources */,
 				CDA8F22E18DA43EA0080DE6D /* redCircle.png in Resources */,
@@ -854,7 +835,6 @@
 				CDA8F20418DA43EA0080DE6D /* FFMonthCalendarView.m in Sources */,
 				CDA8F1FF18DA43EA0080DE6D /* FFDayHeaderCollectionView.m in Sources */,
 				55AFEC5218AC435D005D2B91 /* FFCalendar.xcdatamodeld in Sources */,
-				CDA8F23018DA43EA0080DE6D /* SVProgressHUD.m in Sources */,
 				CDA8F21318DA43EA0080DE6D /* FFYearCalendarView.m in Sources */,
 				CDA8F22A18DA43EA0080DE6D /* FFSearchBarWithAutoComplete.m in Sources */,
 				CDA8F23618DA45DC0080DE6D /* AppDelegate.m in Sources */,

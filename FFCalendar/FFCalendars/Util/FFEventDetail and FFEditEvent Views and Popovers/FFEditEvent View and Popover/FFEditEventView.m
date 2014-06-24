@@ -14,8 +14,7 @@
 #import "FFButtonWithHourPopover.h"
 #import "FFSearchBarWithAutoComplete.h"
 #import "FFGuestsTableView.h"
-
-#import "SVProgressHUD.h"
+//#import "SVProgressHUD.h"
 
 @interface FFEditEventView () <UIGestureRecognizerDelegate>
 @property (nonatomic, strong) FFEvent *event;
@@ -105,9 +104,8 @@
 
 - (IBAction)buttonDoneAction:(id)sender {
     
-    // SVProgressHUD
-    [[SVProgressHUD sharedView] setTintColor:[UIColor blackColor]];
-    [[SVProgressHUD sharedView] setBackgroundColor:[UIColor lighterGrayCustom]];
+    //    [[SVProgressHUD sharedView] setTintColor:[UIColor blackColor]];
+    //    [[SVProgressHUD sharedView] setBackgroundColor:[UIColor lighterGrayCustom]];
     
     FFEvent *eventNew = [FFEvent new];
     eventNew.stringCustomerName = searchBarCustom.stringClientName;
@@ -128,7 +126,8 @@
     }
     
     if (stringError) {
-        [SVProgressHUD showErrorWithStatus:stringError];
+        [[[UIAlertView alloc] initWithTitle:nil message:stringError delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil] show];
+        //        [SVProgressHUD showErrorWithStatus:stringError];
     } else if (protocol != nil && [protocol respondsToSelector:@selector(saveEvent:)]) {
         [protocol saveEvent:eventNew];
         [self buttonDeleteAction:nil];
