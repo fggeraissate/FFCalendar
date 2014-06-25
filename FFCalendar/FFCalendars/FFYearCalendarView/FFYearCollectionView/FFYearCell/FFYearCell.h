@@ -10,9 +10,15 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol FFYearCellProtocol <NSObject>
+@required
+- (void)showMonthCalendar;
+@end
+
 @interface FFYearCell : UICollectionViewCell
 
 @property (nonatomic, strong) NSDate *date;
+@property (nonatomic, strong) id<FFYearCellProtocol> protocol;
 
 - (void)initLayout;
 

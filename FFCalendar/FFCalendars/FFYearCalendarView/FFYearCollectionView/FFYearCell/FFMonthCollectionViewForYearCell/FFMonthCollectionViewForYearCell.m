@@ -25,6 +25,7 @@
 
 #pragma mark - Synthesize
 
+@synthesize protocol;
 @synthesize sizeOfCells;
 @synthesize arrayDates;
 @synthesize dateFirstDayOfMonth;
@@ -48,7 +49,7 @@
     if (self) {
         // Initialization code
         
-        [self setUserInteractionEnabled:NO];
+        [self setUserInteractionEnabled:YES];
         
         [self setDataSource:self];
         [self setDelegate:self];
@@ -59,6 +60,18 @@
         [self registerClass:[FFHeaderMonthForYearCell class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:REUSE_IDENTIFIER_MONTH_HEADER];
     }
     return self;
+}
+
+#pragma mark - UICollectionView Delegate
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    id obj = [arrayDates objectAtIndex:indexPath.row];
+    
+    if (obj != [NSNull null] && protocol != nil && [protocol respondsToSelector:@selector(showMonthCalendar)]) {
+        [[FFDateManager sharedManager] setCurrentDate:(NSDate *)obj];
+        [protocol showMonthCalendar];
+    }
 }
 
 #pragma mark - UICollectionView DataSource
@@ -76,15 +89,11 @@
     
     for (int i=1-(componentsFirstDayOfMonth.weekday-1),j=numOfCellsInCollection-(componentsFirstDayOfMonth.weekday-1); i<=j; i++) {
         
-        if (i >= 1 && i <= lastDayMonth){
-            [arrayDates addObject:[NSDate dateWithYear:compDateManeger.year month:compDateManeger.month day:i]];
-        } else {
-            [arrayDates addObject:[NSNull null]];
-        }
+        [arrayDates addObject:(i>=1 && i<=lastDayMonth)?[NSDate dateWithYear:compDateManeger.year month:compDateManeger.month day:i]:[NSNull null]];
     }
     
-    sizeOfCells =  CGSizeMake((self.frame.size.width)/7,
-                              (self.frame.size.height-50.)/6);
+    sizeOfCells =  CGSizeMake((self.frame.size.width)/7, (self.frame.size.height-50.)/6);
+    
     return [arrayDates count];
 }
 

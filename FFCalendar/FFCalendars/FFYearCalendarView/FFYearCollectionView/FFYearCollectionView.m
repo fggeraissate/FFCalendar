@@ -14,7 +14,7 @@
 #import "FFYearCell.h"
 #import "FFImportantFilesForCalendar.h"
 
-@interface FFYearCollectionView () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+@interface FFYearCollectionView () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, FFYearCellProtocol>
 @property (nonatomic) CGFloat lastContentOffset;
 @property (nonatomic) CGSize sizeOfCell;
 @end
@@ -84,20 +84,11 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
 
     FFYearCell *cell = (FFYearCell *)[collectionView dequeueReusableCellWithReuseIdentifier:REUSE_IDENTIFIER_MONTH_CELL forIndexPath:indexPath];
+    [cell setProtocol:self];
     [cell initLayout];
     [cell setDate:[NSDate dateWithYear:([[FFDateManager sharedManager] currentDate].componentsOfDate.year+(indexPath.section-1)) month:(indexPath.row+1) day:1]];
 
     return cell;
-}
-
-#pragma mark - UICollectionView Delegate
-
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    
-    if (protocol != nil && [protocol respondsToSelector:@selector(showMonthCalendar)]) {
-        [[FFDateManager sharedManager] setCurrentDate:[NSDate dateWithYear:[[FFDateManager sharedManager] currentDate].componentsOfDate.year month:(indexPath.row+1) day:1]];
-        [protocol showMonthCalendar];
-    }
 }
 
 #pragma mark - UICollectionView Delegate FlowLayout
@@ -142,6 +133,25 @@
         scrollDirection = ScrollDirectionNone;
     }
 }
+
+#pragma mark - UICollectionView Delegate
+
+- (void)showMonthCalendar {
+    
+    if (protocol != nil && [protocol respondsToSelector:@selector(showMonthCalendar)]) {
+        [protocol showMonthCalendar];
+    }
+}
+
+//#pragma mark - FFYearCell Protocol
+//
+//- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+//    
+//    if (protocol != nil && [protocol respondsToSelector:@selector(showMonthCalendar)]) {
+//        [[FFDateManager sharedManager] setCurrentDate:[NSDate dateWithYear:[[FFDateManager sharedManager] currentDate].componentsOfDate.year month:(indexPath.row+1) day:1]];
+//        [protocol showMonthCalendar];
+//    }
+//}
 
 #pragma mark - Other Methods
 

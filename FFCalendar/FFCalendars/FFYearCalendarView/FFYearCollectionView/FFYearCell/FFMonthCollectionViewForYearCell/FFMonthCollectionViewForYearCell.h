@@ -10,8 +10,14 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol FFMonthCollectionViewForYearCellProtocol <NSObject>
+@required
+- (void)showMonthCalendar;
+@end
+
 @interface FFMonthCollectionViewForYearCell : UICollectionView
 
 @property (nonatomic, strong) NSDate *date;
+@property (nonatomic, strong) id<FFMonthCollectionViewForYearCellProtocol> protocol;
 
 @end

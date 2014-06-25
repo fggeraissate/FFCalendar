@@ -12,12 +12,13 @@
 
 #import "FFMonthCollectionViewForYearCell.h"
 
-@interface FFYearCell ()
+@interface FFYearCell () <FFMonthCollectionViewForYearCellProtocol>
 @property (nonatomic, strong) FFMonthCollectionViewForYearCell *collectionView;
 @end
 
 @implementation FFYearCell
 
+@synthesize protocol;
 @synthesize date;
 @synthesize collectionView;
 
@@ -43,10 +44,10 @@
     
     if (!collectionView) {
         collectionView = [[FFMonthCollectionViewForYearCell alloc] initWithFrame:CGRectMake(0., 0., self.frame.size.width, self.frame.size.height) collectionViewLayout:[UICollectionViewLayout new]];
+        [collectionView setProtocol:self];
         [self addSubview:collectionView];
     }
 }
-
 
 - (void)setDate:(NSDate *)_date {
     
@@ -54,6 +55,15 @@
     
     [collectionView setDate:date];
     [collectionView reloadData];
+}
+
+#pragma mark - FFMonthCollectionViewForYearCell Protocol
+
+- (void)showMonthCalendar {
+    
+    if (protocol != nil && [protocol respondsToSelector:@selector(showMonthCalendar)]) {
+        [protocol showMonthCalendar];
+    }
 }
 
 @end
