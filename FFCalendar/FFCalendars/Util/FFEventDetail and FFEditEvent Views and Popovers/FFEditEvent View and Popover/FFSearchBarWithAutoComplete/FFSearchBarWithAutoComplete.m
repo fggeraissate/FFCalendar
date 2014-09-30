@@ -87,7 +87,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    int intRows = [arrayOfTableView count];
+    long intRows = [arrayOfTableView count];
     
     CGFloat height = 4*BUTTON_HEIGHT;
     if (intRows < 4) {

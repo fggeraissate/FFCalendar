@@ -84,10 +84,10 @@
     dateFirstDayOfMonth = [NSDate dateWithYear:compDateManeger.year month:compDateManeger.month day:1];
     NSDateComponents *componentsFirstDayOfMonth = [NSDate componentsOfDate:dateFirstDayOfMonth];
     
-    int lastDayMonth = [dateFirstDayOfMonth numberOfDaysInMonthCount];
-    int numOfCellsInCollection = [dateFirstDayOfMonth numberOfWeekInMonthCount]*7;
+    long lastDayMonth = [dateFirstDayOfMonth numberOfDaysInMonthCount];
+    long numOfCellsInCollection = [dateFirstDayOfMonth numberOfWeekInMonthCount]*7;
     
-    for (int i=1-(componentsFirstDayOfMonth.weekday-1),j=numOfCellsInCollection-(componentsFirstDayOfMonth.weekday-1); i<=j; i++) {
+    for (long i=1-(componentsFirstDayOfMonth.weekday-1),j=numOfCellsInCollection-(componentsFirstDayOfMonth.weekday-1); i<=j; i++) {
         
         [arrayDates addObject:(i>=1 && i<=lastDayMonth)?[NSDate dateWithYear:compDateManeger.year month:compDateManeger.month day:i]:[NSNull null]];
     }
@@ -108,7 +108,7 @@
         NSDate *dateCell = (NSDate *)obj;
         NSDateComponents *components = [NSDate componentsOfDate:dateCell];
 
-        [cell.labelDay setText:[NSString stringWithFormat:@"%i", [components day]]];
+        [cell.labelDay setText:[NSString stringWithFormat:@"%li", (long)[components day]]];
         
         if ([NSDate isTheSameDateTheCompA:components compB:[NSDate componentsOfCurrentDate]]) {
             [cell markAsCurrentDay];

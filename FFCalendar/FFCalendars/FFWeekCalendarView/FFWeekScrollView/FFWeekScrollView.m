@@ -50,7 +50,7 @@
         [self addSubview:viewWithHourLines];
         
         collectionViewWeek = [[FFWeekCollectionView alloc] initWithFrame:CGRectMake(viewWithHourLines.frame.size.width,viewWithHourLines.frame.origin.y,self.frame.size.width-viewWithHourLines.frame.size.width,viewWithHourLines.totalHeight+HEIGHT_CELL_HOUR)collectionViewLayout:[UICollectionViewFlowLayout new]];
-        [self scrollToPage:[NSDate componentsOfDate:[[FFDateManager sharedManager] currentDate]].weekOfMonth+1];
+        [self scrollToPage:(int)[NSDate componentsOfDate:[[FFDateManager sharedManager] currentDate]].weekOfMonth+1];
         [self addSubview:collectionViewWeek];
         
         labelWithActualHour = [viewWithHourLines labelWithCurrentHourWithWidth:self.frame.size.width];

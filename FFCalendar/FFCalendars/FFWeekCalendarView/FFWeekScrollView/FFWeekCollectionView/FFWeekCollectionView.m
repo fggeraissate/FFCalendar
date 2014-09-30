@@ -75,7 +75,7 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
-    int intDay = 7*([[[FFDateManager sharedManager] currentDate] numberOfWeekInMonthCount]+2);
+    long intDay = 7*([[[FFDateManager sharedManager] currentDate] numberOfWeekInMonthCount]+2);
     
     return intDay;
 }

@@ -83,7 +83,7 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
-    int intDay = 7*([[[FFDateManager sharedManager] currentDate] numberOfWeekInMonthCount]+2);
+    long intDay = 7*([[[FFDateManager sharedManager] currentDate] numberOfWeekInMonthCount]+2);
     
     return intDay;
 }
@@ -106,7 +106,7 @@
     [cell cleanCell];
     cell.date = dateOfLabel;
     
-    [cell.label setText:[NSString stringWithFormat:@"%@, %i", [arrayWeekAbrev objectAtIndex:compDateOfLabel.weekday-1], compDateOfLabel.day]];
+    [cell.label setText:[NSString stringWithFormat:@"%@, %li", [arrayWeekAbrev objectAtIndex:compDateOfLabel.weekday-1], (long)compDateOfLabel.day]];
     
     if (compDateOfLabel.weekday == 1 || compDateOfLabel.weekday == 7) {
         [cell.label setTextColor:[UIColor grayColor]];

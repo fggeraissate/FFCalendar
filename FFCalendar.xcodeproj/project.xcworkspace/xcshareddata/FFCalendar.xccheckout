@@ -10,29 +10,29 @@
 	<string>FFCalendar</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>DD00E579-5FB9-48D2-A05F-A28F53102CC8</key>
+		<key>F58B54FA332E4AE1758AFDC26AC03FD0D013374F</key>
 		<string>https://github.com/fggeraissate/FFCalendar.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>FFCalendar.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>DD00E579-5FB9-48D2-A05F-A28F53102CC8</key>
+		<key>F58B54FA332E4AE1758AFDC26AC03FD0D013374F</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/fggeraissate/FFCalendar.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>DD00E579-5FB9-48D2-A05F-A28F53102CC8</string>
+	<string>F58B54FA332E4AE1758AFDC26AC03FD0D013374F</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>DD00E579-5FB9-48D2-A05F-A28F53102CC8</string>
+			<string>F58B54FA332E4AE1758AFDC26AC03FD0D013374F</string>
 			<key>IDESourceControlWCCName</key>
 			<string>FFCalendar</string>
 		</dict>

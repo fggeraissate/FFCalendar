@@ -107,7 +107,7 @@
             [arrayButtons addObject:button];
             
             if ((buttonOfNumber == maxNumOfButtons) && ([arrayEvents count] - maxNumOfButtons > 0)) {
-                [button setTitle:[NSString stringWithFormat:@"%i more...", [arrayEvents count] - maxNumOfButtons] forState:UIControlStateNormal];
+                [button setTitle:[NSString stringWithFormat:@"%u more...", [arrayEvents count] - maxNumOfButtons] forState:UIControlStateNormal];
                 break;
             } else {
                 FFEvent *event = [arrayEvents objectAtIndex:i];
@@ -123,7 +123,7 @@
 
 - (void)saveEditedEvent:(FFEvent *)eventNew ofButton:(UIButton *)button {
     
-    int i = [arrayButtons indexOfObject:button];
+    long i = [arrayButtons indexOfObject:button];
     
     if (protocol != nil && [protocol respondsToSelector:@selector(saveEditedEvent:ofCell:atIndex:)]) {
         [protocol saveEditedEvent:eventNew ofCell:self atIndex:i];
@@ -132,7 +132,7 @@
 
 - (void)deleteEventOfButton:(UIButton *)button {
     
-    int i = [arrayButtons indexOfObject:button];
+    long i = [arrayButtons indexOfObject:button];
     
     if (protocol != nil && [protocol respondsToSelector:@selector(deleteEventOfCell:atIndex:)]) {
         [protocol deleteEventOfCell:self atIndex:i];

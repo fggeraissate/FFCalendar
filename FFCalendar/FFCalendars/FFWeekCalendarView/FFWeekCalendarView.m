@@ -63,7 +63,7 @@
         
         scrollViewHeaderWeek = [[FFWeekHeaderCollectionView alloc] initWithFrame:CGRectMake(viewLeft.frame.size.width, 0, self.frame.size.width-viewLeft.frame.size.width, HEADER_HEIGHT_SCROLL)];
         [scrollViewHeaderWeek setProtocol:self];
-        [self scrollToPage:[NSDate componentsOfDate:[[FFDateManager sharedManager] currentDate]].weekOfMonth+1];
+        [self scrollToPage:(int)[NSDate componentsOfDate:[[FFDateManager sharedManager] currentDate]].weekOfMonth+1];
         [self addSubview:scrollViewHeaderWeek];
         
         weekContainerScroll = [[FFWeekScrollView alloc] initWithFrame:CGRectMake(0, HEADER_HEIGHT_SCROLL, self.frame.size.width, self.frame.size.height-HEADER_HEIGHT_SCROLL)];
@@ -92,7 +92,7 @@
 - (void)dateChanged:(NSNotification *)not {
     
     [scrollViewHeaderWeek reloadData];
-    [self scrollToPage:[NSDate componentsOfDate:[[FFDateManager sharedManager] currentDate]].weekOfMonth+1];
+    [self scrollToPage:(int)[NSDate componentsOfDate:[[FFDateManager sharedManager] currentDate]].weekOfMonth+1];
     
     [weekContainerScroll.collectionViewWeek reloadData];
 }

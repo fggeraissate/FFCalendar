@@ -70,7 +70,9 @@
 #pragma mark - Invalidate Layout
 
 - (void)invalidateLayout {
+    
     [collectionViewMonth.collectionViewLayout invalidateLayout];
+    [collectionViewMonth reloadData];
 }
 
 #pragma mark - FFDateManager Notification

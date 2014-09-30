@@ -94,7 +94,7 @@
 - (void)updateLabelWithMonthAndYear {
     
     NSDateComponents *comp = [NSDate componentsOfDate:[[FFDateManager sharedManager] currentDate]];
-    NSString *string = boolYearViewIsShowing ? [NSString stringWithFormat:@"%i", comp.year] : [NSString stringWithFormat:@"%@ %i", [arrayMonthName objectAtIndex:comp.month-1], comp.year];
+    NSString *string = boolYearViewIsShowing ? [NSString stringWithFormat:@"%li", (long)comp.year] : [NSString stringWithFormat:@"%@ %li", [arrayMonthName objectAtIndex:comp.month-1], (long)comp.year];
     [labelWithMonthAndYear setText:string];
 }
 
@@ -213,7 +213,7 @@
 
 - (IBAction)buttonYearMonthWeekDayAction:(id)sender {
     
-    int index = [arrayButtons indexOfObject:sender];
+    long index = [arrayButtons indexOfObject:sender];
     
     [self.view bringSubviewToFront:[arrayCalendars objectAtIndex:index]];
     

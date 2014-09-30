@@ -100,7 +100,7 @@
     NSDateComponents *comp = [NSDate componentsOfDate:date];
     
     //    return [NSString stringWithFormat:@"%@, %i/%i/%i", [dictWeekNumberName objectForKey:[NSNumber numberWithInt:comp.weekday]], comp.day, comp.month, comp.year];
-    return [NSString stringWithFormat:@"%@, %@ %i, %i", [dictWeekNumberName objectForKey:[NSNumber numberWithInt:comp.weekday]], [arrayMonthNameAbrev objectAtIndex:comp.month-1], comp.day, comp.year];
+    return [NSString stringWithFormat:@"%@, %@ %li, %li", [dictWeekNumberName objectForKey:[NSNumber numberWithLong:comp.weekday]], [arrayMonthNameAbrev objectAtIndex:comp.month-1], (long)comp.day, (long)comp.year];
 }
 
 + (NSDateComponents *)componentsWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day {

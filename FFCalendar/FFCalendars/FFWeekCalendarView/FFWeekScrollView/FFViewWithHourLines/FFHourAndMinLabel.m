@@ -44,7 +44,7 @@
 - (void)showText {
     
     NSDateComponents *comp =  [NSDate componentsOfDate:dateHourAndMin];
-    [self setText:[NSString stringWithFormat:@"%02d:%02d", comp.hour, comp.minute]];
+    [self setText:[NSString stringWithFormat:@"%02ld:%02ld", (long)comp.hour, (long)comp.minute]];
     
 }
 
