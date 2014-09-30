@@ -107,7 +107,7 @@
     return label;
 }
 
-- (void)addButtonsWithArray:(NSArray *)array {
+- (void)addButtonsWithArray:(NSArray *)arrayEvents {
     
     for (UIView *subview in self.subviews) {
         if ([subview isKindOfClass:[FFBlueButton class]]) {
@@ -120,9 +120,11 @@
     [labelRed setAlpha:boolIsToday];
     [labelWithSameYOfCurrentHour setAlpha:!boolIsToday];
     
-    NSArray *arrayEvents = array;
     
     if (arrayEvents) {
+        
+        NSMutableArray *arrayFrames = [NSMutableArray new];
+        NSMutableDictionary *dictButtonsWithSameFrame = [NSMutableDictionary new];
         
         for (FFEvent *event in arrayEvents) {
             
@@ -149,6 +151,30 @@
             
             [arrayButtonsEvents addObject:_button];
             [self addSubview:_button];
+            
+            
+            // Save Frames for next step
+            NSValue *value = [NSValue valueWithCGRect:_button.frame];
+            if ([arrayFrames containsObject:value]) {
+                NSMutableArray *array = [dictButtonsWithSameFrame objectForKey:value];
+                if (!array){
+                    array = [[NSMutableArray alloc] initWithObjects:[arrayButtonsEvents objectAtIndex:[arrayFrames indexOfObject:value]], nil];
+
+                }
+                [array addObject:_button];
+                [dictButtonsWithSameFrame setObject:array forKey:value];
+            }
+            [arrayFrames addObject:value];
+        }
+        
+        // Recaulate frames of buttons that have the same begin and end date
+        for (NSValue *value in dictButtonsWithSameFrame) {
+            NSArray *array = [dictButtonsWithSameFrame objectForKey:value];
+            CGFloat width = (self.frame.size.width-95.)/array.count;
+            for (int i = 0; i < array.count; i++) {
+                UIButton *buttonInsideArray = [array objectAtIndex:i];
+                [buttonInsideArray setFrame:CGRectMake(70+i*width, buttonInsideArray.frame.origin.y, width, buttonInsideArray.frame.size.height)];
+            }
         }
     }
 }
