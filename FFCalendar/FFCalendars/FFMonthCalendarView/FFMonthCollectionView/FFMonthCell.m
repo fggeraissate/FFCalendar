@@ -107,7 +107,7 @@
             [arrayButtons addObject:button];
             
             if ((buttonOfNumber == maxNumOfButtons) && ([arrayEvents count] - maxNumOfButtons > 0)) {
-                [button setTitle:[NSString stringWithFormat:@"%u more...", [arrayEvents count] - maxNumOfButtons] forState:UIControlStateNormal];
+                [button setTitle:[NSString stringWithFormat:@"%lu more...", (long)[arrayEvents count] - maxNumOfButtons] forState:UIControlStateNormal];
                 break;
             } else {
                 FFEvent *event = [arrayEvents objectAtIndex:i];
