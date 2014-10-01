@@ -11,9 +11,6 @@ A study of iOS Yearly, Monthly, Weekly and Daily Calendars.
 - For iPad only
 - Works on iOS 7 and above
 
-## Updates
-Know the major updates [here](https://github.com/fggeraissate/FFCalendar/blob/master/Updates).
-
 ## Usage
 Basic usage is implemented in `FFCalendarViewController`. First you should import `FFCalendar.h` in `FFCalendarViewController`. Then, subclass `FFYearCalendarView`, `FFMonthCalendarView`, `FFWeekCalendarView` and `FFDayCalendarView`. Also set the respective protocols, they will always provide the last modified dictionary (which I called `dictEvents`), and hence, they will help to update the others calendars. 
 
