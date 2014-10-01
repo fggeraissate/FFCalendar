@@ -24,10 +24,14 @@
 
 @implementation FFDayHeaderCollectionView
 
+#pragma mark - Synthesize
+
 @synthesize lastContentOffset;
 @synthesize protocol;
 @synthesize boolGoPrevious;
 @synthesize boolGoNext;
+
+#pragma mark - Lifecycle
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -80,6 +84,13 @@
  // Drawing code
  }
  */
+
+#pragma mark - UIScrollView Methods
+
+- (BOOL)touchesShouldCancelInContentView:(UIView *)view {
+    
+    return YES;
+}
 
 #pragma mark - UICollectionView DataSource
 
