@@ -102,8 +102,7 @@
         }
     }
     
-    CGSize sizeOfCells =  CGSizeMake((self.frame.size.width-6*SPACE_COLLECTIONVIEW_CELL)/7,
-                              (self.frame.size.height-([dateFirstDayOfMonth numberOfWeekInMonthCount]-1)*SPACE_COLLECTIONVIEW_CELL-SPACE_COLLECTIONVIEW_CELL)/[dateFirstDayOfMonth numberOfWeekInMonthCount]);
+    CGSize sizeOfCells =  CGSizeMake((self.frame.size.width-7*SPACE_COLLECTIONVIEW_CELL)/7, (self.frame.size.height-([dateFirstDayOfMonth numberOfWeekInMonthCount]-1)*SPACE_COLLECTIONVIEW_CELL-SPACE_COLLECTIONVIEW_CELL)/[dateFirstDayOfMonth numberOfWeekInMonthCount]);
     
     [arraySizeOfCells replaceObjectAtIndex:section withObject:[NSValue valueWithCGSize:sizeOfCells]];
     
