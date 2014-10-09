@@ -15,6 +15,7 @@
 
 @interface FFViewWithHourLines ()
 @property (nonatomic, strong) NSMutableArray *arrayLabelsHourAndMin;
+@property (nonatomic, strong) FFHourAndMinLabel *labelRed;
 @property (nonatomic) CGFloat yCurrent;
 @end
 
@@ -26,6 +27,7 @@
 @synthesize yCurrent;
 @synthesize totalHeight;
 @synthesize labelWithSameYOfCurrentHour;
+@synthesize labelRed;
 
 #pragma mark - Lifecycle
 
@@ -36,6 +38,8 @@
         // Initialization code
         
         [self setAutoresizingMask:AR_WIDTH_HEIGHT];
+        
+        arrayLabelsHourAndMin = [NSMutableArray new];
         
         CGFloat y = 0;
         
@@ -74,19 +78,52 @@
     return self;
 }
 
+- (void)reloadLabelRedAndShow:(BOOL)show {
+    
+    [labelWithSameYOfCurrentHour setAlpha:1];
+    
+    NSDateComponents *compNow = [NSDate componentsOfCurrentDate];
+
+    if (show) {
+
+        for (FFHourAndMinLabel *label in arrayLabelsHourAndMin) {
+            NSDateComponents *compLabel = [NSDate componentsOfDate:label.dateHourAndMin];
+
+            if (compLabel.hour == compNow.hour && compLabel.minute <= compNow.minute && compNow.minute < compLabel.minute+MINUTES_PER_LABEL) {
+                CGRect frame = labelRed.frame;
+                frame.origin.y = label.frame.origin.y;
+                [labelRed setFrame:frame];
+                [(FFHourAndMinLabel *)labelRed setDateHourAndMin:[NSDate date]];
+                [(FFHourAndMinLabel *)labelRed showText];
+
+                labelWithSameYOfCurrentHour = label;
+                
+                yCurrent = label.frame.origin.y;
+                
+                break;
+            }
+        }
+    }
+
+    [labelRed setAlpha:show];
+    [labelWithSameYOfCurrentHour setAlpha:!show];
+}
+
+
 - (UILabel *)labelWithCurrentHourWithWidth:(CGFloat)_width {
     
-    FFHourAndMinLabel *label = [[FFHourAndMinLabel alloc] initWithFrame:CGRectMake(10, yCurrent, _width-10, HEIGHT_CELL_MIN) date:[NSDate date]];
-    [label showText];
-    [label setTextColor:[UIColor redColor]];
-    CGFloat width = [label widthThatWouldFit];
+    labelRed = [[FFHourAndMinLabel alloc] initWithFrame:CGRectMake(10, yCurrent, _width-10, HEIGHT_CELL_MIN) date:[NSDate date]];
+    [labelRed setTextColor:[UIColor redColor]];
+    [labelRed showText];
     
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(label.frame.origin.x+width, HEIGHT_CELL_MIN/2., _width-label.frame.origin.x-width, 1.)];
+    CGFloat width = [labelRed widthThatWouldFit];
+    
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(labelRed.frame.origin.x+width, HEIGHT_CELL_MIN/2., _width-labelRed.frame.origin.x-width, 1.)];
     [view setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
     [view setBackgroundColor:[UIColor redColor]];
-    [label addSubview:view];
-
-    return label;
+    [labelRed addSubview:view];
+    
+    return labelRed;
 }
 
 /*

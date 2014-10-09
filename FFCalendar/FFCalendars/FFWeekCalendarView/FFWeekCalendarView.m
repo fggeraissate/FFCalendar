@@ -108,12 +108,7 @@
 
 - (void)showHourLine:(BOOL)show {
     
-    [weekContainerScroll.labelWithActualHour setAlpha:show];
-    [weekContainerScroll.labelGrayWithActualHour setAlpha:!show];
-    
-    if (show) {
-        [weekContainerScroll scrollRectToVisible:CGRectMake(weekContainerScroll.frame.origin.x, weekContainerScroll.labelWithActualHour.frame.origin.y, weekContainerScroll.frame.size.width, weekContainerScroll.frame.size.height) animated:YES];
-    }
+    [weekContainerScroll showlabelsWithActualHourWithAlpha:show];
 }
 
 - (void)setNewDictionary:(NSDictionary *)dict {

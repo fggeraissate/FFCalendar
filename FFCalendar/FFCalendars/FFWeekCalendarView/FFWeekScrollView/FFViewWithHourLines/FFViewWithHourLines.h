@@ -16,5 +16,6 @@
 @property (nonatomic) CGFloat totalHeight;
 
 - (UILabel *)labelWithCurrentHourWithWidth:(CGFloat)_width;
+- (void)reloadLabelRedAndShow:(BOOL)show;
 
 @end

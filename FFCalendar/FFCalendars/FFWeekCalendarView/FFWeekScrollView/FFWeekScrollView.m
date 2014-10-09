@@ -67,6 +67,19 @@
     [collectionViewWeek reloadData];
 }
 
+- (void)showlabelsWithActualHourWithAlpha:(BOOL)show {
+    
+    [viewWithHourLines reloadLabelRedAndShow:show];
+    
+    [labelWithActualHour setFrame:CGRectMake(labelWithActualHour.frame.origin.x, labelWithActualHour.frame.origin.y+viewWithHourLines.frame.origin.y, labelWithActualHour.frame.size.width, labelWithActualHour.frame.size.height)];
+    
+    labelGrayWithActualHour = viewWithHourLines.labelWithSameYOfCurrentHour;
+    
+    if (show) {
+        [self scrollRectToVisible:CGRectMake(self.frame.origin.x, labelWithActualHour.frame.origin.y, self.frame.size.width, self.frame.size.height) animated:YES];
+    }
+}
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

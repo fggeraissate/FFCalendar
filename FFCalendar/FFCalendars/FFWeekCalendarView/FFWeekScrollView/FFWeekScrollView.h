@@ -19,4 +19,6 @@
 @property (nonatomic, strong) UILabel *labelWithActualHour;
 @property (nonatomic, strong) UILabel *labelGrayWithActualHour;
 
+- (void)showlabelsWithActualHourWithAlpha:(BOOL)show;
+
 @end

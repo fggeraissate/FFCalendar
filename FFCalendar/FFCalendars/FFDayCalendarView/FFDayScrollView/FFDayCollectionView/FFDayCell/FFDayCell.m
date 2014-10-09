@@ -92,21 +92,6 @@
     }
 }
 
-- (UILabel *)labelWithCurrentHourWithWidth:(CGFloat)_width yCurrent:(CGFloat)_yCurrent {
-    
-    FFHourAndMinLabel *label = [[FFHourAndMinLabel alloc] initWithFrame:CGRectMake(.0, _yCurrent, _width, HEIGHT_CELL_MIN) date:[NSDate date]];
-    [label showText];
-    [label setTextColor:[UIColor redColor]];
-    CGFloat width = [label widthThatWouldFit];
-    
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(label.frame.origin.x+width+10., HEIGHT_CELL_MIN/2., _width-label.frame.origin.x-width-20., 1.)];
-    [view setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
-    [view setBackgroundColor:[UIColor redColor]];
-    [label addSubview:view];
-    
-    return label;
-}
-
 - (void)addButtonsWithArray:(NSArray *)arrayEvents {
     
     for (UIView *subview in self.subviews) {
@@ -116,10 +101,7 @@
     }
     [arrayButtonsEvents removeAllObjects];
     
-    BOOL boolIsToday = [NSDate isTheSameDateTheCompA:[NSDate componentsOfCurrentDate] compB:[NSDate componentsOfDate:date]];
-    [labelRed setAlpha:boolIsToday];
-    [labelWithSameYOfCurrentHour setAlpha:!boolIsToday];
-    
+    [self reloadLabelRed];
     
     if (arrayEvents) {
         
@@ -177,6 +159,50 @@
             }
         }
     }
+}
+
+- (void)reloadLabelRed {
+    
+    [labelWithSameYOfCurrentHour setAlpha:1];
+    
+    NSDateComponents *compNow = [NSDate componentsOfCurrentDate];
+    BOOL boolIsToday = [NSDate isTheSameDateTheCompA:[NSDate componentsOfCurrentDate] compB:[NSDate componentsOfDate:date]];
+    
+    if (boolIsToday) {
+        
+        for (FFHourAndMinLabel *label in arrayLabelsHourAndMin) {
+            NSDateComponents *compLabel = [NSDate componentsOfDate:label.dateHourAndMin];
+            
+            if (compLabel.hour == compNow.hour && compLabel.minute <= compNow.minute && compNow.minute < compLabel.minute+MINUTES_PER_LABEL) {
+                CGRect frame = labelRed.frame;
+                frame.origin.y = label.frame.origin.y;
+                [labelRed setFrame:frame];
+                [(FFHourAndMinLabel *)labelRed setDateHourAndMin:[NSDate date]];
+                [(FFHourAndMinLabel *)labelRed showText];
+                
+                labelWithSameYOfCurrentHour = label;
+                break;
+            }
+        }
+    }
+    
+    [labelRed setAlpha:boolIsToday];
+    [labelWithSameYOfCurrentHour setAlpha:!boolIsToday];
+}
+
+- (UILabel *)labelWithCurrentHourWithWidth:(CGFloat)_width yCurrent:(CGFloat)_yCurrent {
+    
+    FFHourAndMinLabel *label = [[FFHourAndMinLabel alloc] initWithFrame:CGRectMake(.0, _yCurrent, _width, HEIGHT_CELL_MIN) date:[NSDate date]];
+    [label showText];
+    [label setTextColor:[UIColor redColor]];
+    CGFloat width = [label widthThatWouldFit];
+    
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(label.frame.origin.x+width+10., HEIGHT_CELL_MIN/2., _width-label.frame.origin.x-width-20., 1.)];
+    [view setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
+    [view setBackgroundColor:[UIColor redColor]];
+    [label addSubview:view];
+    
+    return label;
 }
 
 #pragma mark - Button Action
