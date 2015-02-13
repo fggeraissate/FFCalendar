@@ -1017,19 +1017,19 @@
 		55AFEC6F18AC435D005D2B91 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FFCalender.app/FFCalender";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FFCalendar.app/FFCalendar";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FFCalender/FFCalender-Prefix.pch";
+				GCC_PREFIX_HEADER = "FFCalendar/FFCalendar-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "FFCalenderTests/FFCalendarTests-Info.plist";
+				INFOPLIST_FILE = "FFCalendarTests/FFCalendarTests-Info.plist";
 				PRODUCT_NAME = FFCalendarTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -1039,15 +1039,15 @@
 		55AFEC7018AC435D005D2B91 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FFCalender.app/FFCalender";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FFCalendar.app/FFCalendar";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FFCalender/FFCalender-Prefix.pch";
-				INFOPLIST_FILE = "FFCalenderTests/FFCalendarTests-Info.plist";
+				GCC_PREFIX_HEADER = "FFCalendar/FFCalendar-Prefix.pch";
+				INFOPLIST_FILE = "FFCalendarTests/FFCalendarTests-Info.plist";
 				PRODUCT_NAME = FFCalendarTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
