@@ -14,7 +14,7 @@
 		<string>https://github.com/fggeraissate/FFCalendar.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>FFCalendar.xcodeproj/project.xcworkspace</string>
+	<string>FFCalendar.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>F58B54FA332E4AE1758AFDC26AC03FD0D013374F</key>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>F58B54FA332E4AE1758AFDC26AC03FD0D013374F</string>
 			<key>IDESourceControlWCCName</key>
-			<string>FFCalendar</string>
+			<string>FFCalendar-master</string>
 		</dict>
 	</array>
 </dict>

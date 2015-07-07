@@ -15,12 +15,6 @@
 		55AFEC4B18AC435D005D2B91 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55AFEC4A18AC435D005D2B91 /* main.m */; };
 		55AFEC5218AC435D005D2B91 /* FFCalendar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 55AFEC5018AC435D005D2B91 /* FFCalendar.xcdatamodeld */; };
 		55AFEC5418AC435D005D2B91 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55AFEC5318AC435D005D2B91 /* Images.xcassets */; };
-		55AFEC5B18AC435D005D2B91 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AFEC5A18AC435D005D2B91 /* XCTest.framework */; };
-		55AFEC5C18AC435D005D2B91 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AFEC3C18AC435D005D2B91 /* Foundation.framework */; };
-		55AFEC5D18AC435D005D2B91 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AFEC4018AC435D005D2B91 /* UIKit.framework */; };
-		55AFEC5E18AC435D005D2B91 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AFEC4218AC435D005D2B91 /* CoreData.framework */; };
-		55AFEC6618AC435D005D2B91 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 55AFEC6418AC435D005D2B91 /* InfoPlist.strings */; };
-		55AFEC6818AC435D005D2B91 /* FFCalendarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 55AFEC6718AC435D005D2B91 /* FFCalendarTests.m */; };
 		CDA596E619086CFA00CB4F93 /* DailyCalendar.png in Resources */ = {isa = PBXBuildFile; fileRef = CDA596E219086CFA00CB4F93 /* DailyCalendar.png */; };
 		CDA596E719086CFA00CB4F93 /* MonthlyCalendar.png in Resources */ = {isa = PBXBuildFile; fileRef = CDA596E319086CFA00CB4F93 /* MonthlyCalendar.png */; };
 		CDA596E819086CFA00CB4F93 /* WeeklyCalendar.png in Resources */ = {isa = PBXBuildFile; fileRef = CDA596E419086CFA00CB4F93 /* WeeklyCalendar.png */; };
@@ -82,16 +76,6 @@
 		CDA8F23618DA45DC0080DE6D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA8F23518DA45DC0080DE6D /* AppDelegate.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		55AFEC5F18AC435D005D2B91 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 55AFEC3118AC435C005D2B91 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 55AFEC3818AC435C005D2B91;
-			remoteInfo = FFCalender;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		55AFEC3918AC435C005D2B91 /* FFCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FFCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55AFEC3C18AC435D005D2B91 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -104,7 +88,6 @@
 		55AFEC4C18AC435D005D2B91 /* FFCalendar-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FFCalendar-Prefix.pch"; sourceTree = "<group>"; };
 		55AFEC5118AC435D005D2B91 /* FFCalendar.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FFCalendar.xcdatamodel; sourceTree = "<group>"; };
 		55AFEC5318AC435D005D2B91 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		55AFEC5918AC435D005D2B91 /* FFCalendarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FFCalendarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55AFEC5A18AC435D005D2B91 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		55AFEC6318AC435D005D2B91 /* FFCalendarTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FFCalendarTests-Info.plist"; sourceTree = "<group>"; };
 		55AFEC6518AC435D005D2B91 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -238,17 +221,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		55AFEC5618AC435D005D2B91 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				55AFEC5B18AC435D005D2B91 /* XCTest.framework in Frameworks */,
-				55AFEC5E18AC435D005D2B91 /* CoreData.framework in Frameworks */,
-				55AFEC5D18AC435D005D2B91 /* UIKit.framework in Frameworks */,
-				55AFEC5C18AC435D005D2B91 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -266,7 +238,6 @@
 			isa = PBXGroup;
 			children = (
 				55AFEC3918AC435C005D2B91 /* FFCalendar.app */,
-				55AFEC5918AC435D005D2B91 /* FFCalendarTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -737,24 +708,6 @@
 			productReference = 55AFEC3918AC435C005D2B91 /* FFCalendar.app */;
 			productType = "com.apple.product-type.application";
 		};
-		55AFEC5818AC435D005D2B91 /* FFCalendarTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 55AFEC6E18AC435D005D2B91 /* Build configuration list for PBXNativeTarget "FFCalendarTests" */;
-			buildPhases = (
-				55AFEC5518AC435D005D2B91 /* Sources */,
-				55AFEC5618AC435D005D2B91 /* Frameworks */,
-				55AFEC5718AC435D005D2B91 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				55AFEC6018AC435D005D2B91 /* PBXTargetDependency */,
-			);
-			name = FFCalendarTests;
-			productName = FFCalenderTests;
-			productReference = 55AFEC5918AC435D005D2B91 /* FFCalendarTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -763,11 +716,6 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Fernanda G. Geraissate";
-				TargetAttributes = {
-					55AFEC5818AC435D005D2B91 = {
-						TestTargetID = 55AFEC3818AC435C005D2B91;
-					};
-				};
 			};
 			buildConfigurationList = 55AFEC3418AC435C005D2B91 /* Build configuration list for PBXProject "FFCalendar" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -782,7 +730,6 @@
 			projectRoot = "";
 			targets = (
 				55AFEC3818AC435C005D2B91 /* FFCalendar */,
-				55AFEC5818AC435D005D2B91 /* FFCalendarTests */,
 			);
 		};
 /* End PBXProject section */
@@ -800,14 +747,6 @@
 				CDA596E619086CFA00CB4F93 /* DailyCalendar.png in Resources */,
 				CDA8F22D18DA43EA0080DE6D /* blackCircle.png in Resources */,
 				55AFEC5418AC435D005D2B91 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		55AFEC5718AC435D005D2B91 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				55AFEC6618AC435D005D2B91 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -876,23 +815,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		55AFEC5518AC435D005D2B91 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				55AFEC6818AC435D005D2B91 /* FFCalendarTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		55AFEC6018AC435D005D2B91 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 55AFEC3818AC435C005D2B91 /* FFCalendar */;
-			targetProxy = 55AFEC5F18AC435D005D2B91 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		55AFEC4718AC435D005D2B91 /* InfoPlist.strings */ = {
@@ -1014,46 +937,6 @@
 			};
 			name = Release;
 		};
-		55AFEC6F18AC435D005D2B91 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FFCalender.app/FFCalender";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FFCalender/FFCalender-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "FFCalenderTests/FFCalendarTests-Info.plist";
-				PRODUCT_NAME = FFCalendarTests;
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		55AFEC7018AC435D005D2B91 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FFCalender.app/FFCalender";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FFCalender/FFCalender-Prefix.pch";
-				INFOPLIST_FILE = "FFCalenderTests/FFCalendarTests-Info.plist";
-				PRODUCT_NAME = FFCalendarTests;
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1071,15 +954,6 @@
 			buildConfigurations = (
 				55AFEC6C18AC435D005D2B91 /* Debug */,
 				55AFEC6D18AC435D005D2B91 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		55AFEC6E18AC435D005D2B91 /* Build configuration list for PBXNativeTarget "FFCalendarTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				55AFEC6F18AC435D005D2B91 /* Debug */,
-				55AFEC7018AC435D005D2B91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
