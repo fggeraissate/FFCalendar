@@ -55,6 +55,8 @@ typedef enum ScrollDirection {
 #define AR_LEFT_RIGHT UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin
 #define AR_LEFT_BOTTOM UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleBottomMargin
 
+#define MONTH_DAY_WIDTH_HEIGHT 30.
+
 @interface FFConstants
 
 @end
